@@ -7,17 +7,39 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    var multiplicationFactor = 0
+    
+    var playCheer: AVAudioPlayer = AVAudioPlayer()
+    
+    var playAww: AVAudioPlayer = AVAudioPlayer()
+    
     @IBOutlet var pickerView: UIPickerView!
     
+    @IBAction func playButtonPressed(sender: AnyObject) {
+        
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         
+        do {
+            
+            try playCheer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Cheer", ofType: "m4a")!))
+            try playAww = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Aww", ofType: "m4a")!))
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+
+        playCheer.prepareToPlay()
+        playAww.prepareToPlay()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +71,65 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerView.backgroundColor = UIColor(colorLiteralRed: 125, green: 200, blue: 150, alpha: 0.6)
         return myTitle
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        let value = pickerData[row]
+        
+        switch value {
+            
+        case "One":
+            multiplicationFactor = 1
+            
+        case "Two":
+            multiplicationFactor = 2
+            
+        case "Three":
+            multiplicationFactor = 3
+            
+        case "Four":
+            multiplicationFactor = 4
+            
+        case "Five":
+            multiplicationFactor = 5
+            
+        case "Six":
+            multiplicationFactor = 6
+            
+        case "Seven":
+            multiplicationFactor = 7
+            
+        case "Eight":
+            multiplicationFactor = 8
+            
+        case "Nine":
+            multiplicationFactor = 9
+            
+        case "Ten":
+            multiplicationFactor = 10
+            
+        case "Eleven":
+            multiplicationFactor = 11
+            
+        default:
+            multiplicationFactor = 12
+            
+        }
+    }
 
+    func playSound(sound: String) {
+        if playCheer == true {
+            playCheer.stop()
+        }
+        if playAww == true {
+            playAww.stop()
+        }
+        if sound == "Cheer" {
+            playCheer.play()
+        } else {
+            playAww.play()
+        }
+    }
 
 }
 
