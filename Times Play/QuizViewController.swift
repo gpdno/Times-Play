@@ -22,9 +22,15 @@ class QuizViewController: UIViewController {
     
     var imageArray: [UIImage] = [UIImage(named: "star.png")!, UIImage(named: "circle.png")!, UIImage(named: "square.png")!, UIImage(named: "triangle.png")!]
 
-    @IBOutlet var buttonViews: [UIButton]!
+    @IBOutlet var buttonOne: UIButton!
+    @IBOutlet var buttonTwo: UIButton!
+    @IBOutlet var buttonThree: UIButton!
+    @IBOutlet var buttonFour: UIButton!
     
-    @IBOutlet var imageViews: [UIImageView]!
+    @IBOutlet var imageOne: UIImageView!
+    @IBOutlet var imageTwo: UIImageView!
+    @IBOutlet var imageThree: UIImageView!
+    @IBOutlet var imageFour: UIImageView!
     
     @IBOutlet var numberOfQuestions: UILabel!
     
@@ -32,16 +38,45 @@ class QuizViewController: UIViewController {
     
     @IBOutlet var questionText: UILabel!
     
+    
+    @IBAction func pressButtonOne(sender: UIButton) {
+        
+        let buttonValueInt = Int(buttonOne.currentTitle!)!
+        
+        checkForResults(buttonValueInt)
+        
+    }
+    
+    @IBAction func pressButtonTwo(sender: UIButton) {
+        
+        let buttonValueInt = Int(buttonTwo.currentTitle!)!
+        
+        checkForResults(buttonValueInt)
+    }
+    
+    @IBAction func pressButtonThree(sender: UIButton) {
+        
+        let buttonValueInt = Int(buttonThree.currentTitle!)!
+        
+        checkForResults(buttonValueInt)
+    }
+    
+    @IBAction func pressButtonFour(sender: UIButton) {
+        
+        let buttonValueInt = Int(buttonFour.currentTitle!)!
+        
+        checkForResults(buttonValueInt)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentScore.text = "Score:  0"
 
         playGame()
     }
 
-    
-    @IBAction func buttonViewsPressed(btn: UIButton) {
-        
-    }
+
     func playGame() {
         
         numberOfQuestions.text = "Questions: \(currentRound) of \(numberOfRounds)"
@@ -49,8 +84,8 @@ class QuizViewController: UIViewController {
         if currentRound <= numberOfRounds {
             
             guessValues()
-//
-//            setButtons()
+
+            setButtons()
             
             currentRound++
             
@@ -62,14 +97,12 @@ class QuizViewController: UIViewController {
         
     }
     
-//    func endGame() {
-//        
-//        totalScore.hidden = false
-//        
-//        totalScore.text = "Final Score:  \(numberCorrect) out of \(numberOfRounds)"
-//        
-//        showAlert()
-//    }
+    func endGame() {
+        
+        currentScore.text = "Final Score:  \(numberCorrect) out of \(numberOfRounds)"
+        
+        //showAlert()
+    }
     
 
     func guessValues() {
@@ -91,28 +124,52 @@ class QuizViewController: UIViewController {
         
     }
     
-//    func setButtons() {
-//        
-//        let newArray = randomArray.shuffle()
-//   
-//        buttonViews[1].setTitle("\(newArray[0])", forState: UIControlState.Normal)
-//        buttonViews[2].setTitle("\(newArray[1])", forState: UIControlState.Normal)
-//        buttonViews[3].setTitle("\(newArray[2])", forState: UIControlState.Normal)
-//        buttonViews[4].setTitle("\(newArray[3])", forState: UIControlState.Normal)
-//        
-//        let newArrayImages = imageArray.shuffle()
-//        
-//        let imageViewOne = UIImageView(image: newArrayImages[0])
-//        let imageViewTwo = UIImageView(image: newArrayImages[1])
-//        let imageViewThree = UIImageView(image: newArrayImages[2])
-//        let imageViewFour = UIImageView(image: newArrayImages[3])
-//        
-//        imageViews[1].addSubview(imageViewOne)
-//        imageViews[2].addSubview(imageViewTwo)
-//        imageViews[3].addSubview(imageViewThree)
-//        imageViews[4].addSubview(imageViewFour)
-//        
-//    }
+    
+    func checkForResults(a: Int) {
+        
+        if a == randomArray[0] {
+            
+            numberCorrect++
+            
+            currentScore.text = "Score:  \(numberCorrect)"
+            
+           // playCheer.play()
+            
+            playGame()
+            
+        } else {
+            
+           // playAww.play()
+            
+            playGame()
+            
+        }
+        
+    }
+
+    
+    func setButtons() {
+        
+        let newArray = randomArray//randomArray.shuffle()
+   
+        buttonOne.setTitle("\(newArray[0])", forState: UIControlState.Normal)
+        buttonTwo.setTitle("\(newArray[1])", forState: UIControlState.Normal)
+        buttonThree.setTitle("\(newArray[2])", forState: UIControlState.Normal)
+        buttonFour.setTitle("\(newArray[3])", forState: UIControlState.Normal)
+        
+        let newArrayImages = imageArray.shuffle()
+        
+        let imageViewOne = UIImageView(image: newArrayImages[0])
+        let imageViewTwo = UIImageView(image: newArrayImages[1])
+        let imageViewThree = UIImageView(image: newArrayImages[2])
+        let imageViewFour = UIImageView(image: newArrayImages[3])
+        
+        imageOne.addSubview(imageViewOne)
+        imageTwo.addSubview(imageViewTwo)
+        imageThree.addSubview(imageViewThree)
+        imageFour.addSubview(imageViewFour)
+        
+    }
 }
 
 

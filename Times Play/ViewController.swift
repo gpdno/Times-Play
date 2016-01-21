@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var playAww: AVAudioPlayer = AVAudioPlayer()
     
-    var multiplicationFactor = String()
+    var multiplicationFactor = "1"
     
     @IBOutlet var pickerView: UIPickerView!
     
