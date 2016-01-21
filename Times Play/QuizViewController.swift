@@ -17,7 +17,9 @@ class QuizViewController: UIViewController {
     
     var passedMultiplicationNumber = String()
     
-    var correctAnswer = String()
+    //    var title = String()
+    //
+    //    var correctAnswer = String()
     
     var randomResult = Int()
     
@@ -131,9 +133,13 @@ class QuizViewController: UIViewController {
     
     func endGame() {
         
-        currentScore.text = "Final Score:  \(numberCorrect) out of \(numberOfRounds)"
+        let title = "Game Over"
         
-        //showAlert()
+        let message = "Final Score:  \(numberCorrect) out of \(numberOfRounds)"
+        
+        currentScore.text = message
+        
+        showAlert(title, message: message)
     }
     
     
@@ -170,11 +176,11 @@ class QuizViewController: UIViewController {
             
             playSfx("Aww")
             
-            correctAnswer = "The correct answer is:  \(passedMultiplicationNumber) X \(randomResult) = \(randomArray[0])"
+            let title = "Sorry"
             
-            showAlert()
+            let correctAnswer = "The correct answer is:  \(passedMultiplicationNumber) X \(randomResult) = \(randomArray[0])"
             
-           // playGame()
+            showAlert(title, message: correctAnswer)
             
         }
         
@@ -217,15 +223,21 @@ class QuizViewController: UIViewController {
         
     }
     
-    func showAlert() {
-    
-        let alertController = UIAlertController(title: "Sorry", message: correctAnswer, preferredStyle: .Alert)
+    func showAlert(title: String, message: String) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
         // Initialize Actions
         let yesAction = UIAlertAction(title: "Ok", style: .Default) { (action) -> Void in
             
-            self.playGame()
-            
+            if title == "Game Over" {
+                
+                self.performSegueWithIdentifier("backToPlay", sender: self)
+                
+            } else {
+                
+                self.playGame()
+            }
         }
         
         // Add Actions
@@ -235,6 +247,8 @@ class QuizViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
         
     }
+    
+    
 }
 
 

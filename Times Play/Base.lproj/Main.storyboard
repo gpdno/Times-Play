@@ -100,7 +100,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="byM-Ms-tVQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -250,11 +250,12 @@
                         <outlet property="imageTwo" destination="Zwj-aY-DUr" id="L9Y-kI-YtN"/>
                         <outlet property="numberOfQuestions" destination="Ebm-of-5am" id="jG9-gF-yCV"/>
                         <outlet property="questionText" destination="HIC-1U-HPc" id="git-vJ-DP6"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToPlay" id="NBr-hO-weX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uY-y7-sMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="377"/>
+            <point key="canvasLocation" x="1008" y="377"/>
         </scene>
     </scenes>
     <resources>
