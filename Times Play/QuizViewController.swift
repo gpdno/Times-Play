@@ -26,7 +26,7 @@ class QuizViewController: UIViewController {
     var randomArray = [0, 0, 0, 0]
     
     var imageArray: [UIImage] = [UIImage(named: "star.png")!, UIImage(named: "circle.png")!, UIImage(named: "square.png")!, UIImage(named: "triangle.png")!]
-
+    
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
     @IBOutlet var buttonThree: UIButton!
@@ -100,11 +100,11 @@ class QuizViewController: UIViewController {
         playAww.prepareToPlay()
         
         currentScore.text = "Score:  0"
-
+        
         playGame()
     }
-
-
+    
+    
     func playGame() {
         
         if currentRound <= numberOfRounds {
@@ -114,7 +114,7 @@ class QuizViewController: UIViewController {
             currentRound++
             
             guessValues()
-
+            
             setButtons()
             
         } else {
@@ -132,7 +132,7 @@ class QuizViewController: UIViewController {
         //showAlert()
     }
     
-
+    
     func guessValues() {
         
         let randomResult = (Int(arc4random_uniform(12)) + 1)
@@ -161,25 +161,25 @@ class QuizViewController: UIViewController {
             
             currentScore.text = "Score:  \(numberCorrect)"
             
-           // playCheer.play()
+            playSfx("Cheer")
             
             playGame()
             
         } else {
             
-           // playAww.play()
+            playSfx("Aww")
             
             playGame()
             
         }
         
     }
-
+    
     
     func setButtons() {
         
         let newArray = randomArray.shuffle()
-   
+        
         buttonOne.setTitle("\(newArray[0])", forState: UIControlState.Normal)
         buttonTwo.setTitle("\(newArray[1])", forState: UIControlState.Normal)
         buttonThree.setTitle("\(newArray[2])", forState: UIControlState.Normal)
@@ -196,6 +196,19 @@ class QuizViewController: UIViewController {
         imageTwo.addSubview(imageViewTwo)
         imageThree.addSubview(imageViewThree)
         imageFour.addSubview(imageViewFour)
+        
+    }
+    
+    func playSfx(name: String) {
+        
+        playCheer.pause()
+        playAww.pause()
+        
+        if name == "Cheer" {
+            playCheer.play()
+        } else {
+            playAww.play()
+        }
         
     }
 }
