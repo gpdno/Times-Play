@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuizViewController: UIViewController {
+    
+    var playCheer: AVAudioPlayer = AVAudioPlayer()
+    
+    var playAww: AVAudioPlayer = AVAudioPlayer()
     
     var passedMultiplicationNumber = String()
     
@@ -71,6 +76,29 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let audioPathCheer = NSBundle.mainBundle().pathForResource("Cheer", ofType: "m4a")!
+        
+        do {
+            
+            try playCheer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPathCheer))
+            
+        } catch {
+            // process error
+        }
+        
+        let audioPathAww = NSBundle.mainBundle().pathForResource("Aww", ofType: "m4a")!
+        
+        do {
+            
+            try playAww = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPathAww))
+            
+        } catch {
+            // process error
+        }
+        
+        playCheer.prepareToPlay()
+        playAww.prepareToPlay()
+        
         currentScore.text = "Score:  0"
 
         playGame()
@@ -79,19 +107,19 @@ class QuizViewController: UIViewController {
 
     func playGame() {
         
-        numberOfQuestions.text = "Questions: \(currentRound) of \(numberOfRounds)"
-        
         if currentRound <= numberOfRounds {
+            
+            numberOfQuestions.text = "Questions: \(currentRound) of \(numberOfRounds)"
+            
+            currentRound++
             
             guessValues()
 
             setButtons()
             
-            currentRound++
-            
         } else {
             
-          //  endGame()
+            endGame()
             
         }
         
@@ -150,7 +178,7 @@ class QuizViewController: UIViewController {
     
     func setButtons() {
         
-        let newArray = randomArray//randomArray.shuffle()
+        let newArray = randomArray.shuffle()
    
         buttonOne.setTitle("\(newArray[0])", forState: UIControlState.Normal)
         buttonTwo.setTitle("\(newArray[1])", forState: UIControlState.Normal)
