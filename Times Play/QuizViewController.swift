@@ -17,6 +17,10 @@ class QuizViewController: UIViewController {
     
     var passedMultiplicationNumber = String()
     
+    var correctAnswer = String()
+    
+    var randomResult = Int()
+    
     let numberOfRounds = 10
     
     var currentRound = 1
@@ -135,7 +139,7 @@ class QuizViewController: UIViewController {
     
     func guessValues() {
         
-        let randomResult = (Int(arc4random_uniform(12)) + 1)
+        randomResult = (Int(arc4random_uniform(12)) + 1)
         
         randomArray[0] = randomResult * Int(passedMultiplicationNumber)!
         
@@ -146,9 +150,6 @@ class QuizViewController: UIViewController {
         }
         
         questionText.text = "\(passedMultiplicationNumber) X \(randomResult)"
-        
-        print(passedMultiplicationNumber)
-        print(randomArray)
         
     }
     
@@ -169,7 +170,11 @@ class QuizViewController: UIViewController {
             
             playSfx("Aww")
             
-            playGame()
+            correctAnswer = "The correct answer is:  \(passedMultiplicationNumber) X \(randomResult) = \(randomArray[0])"
+            
+            showAlert()
+            
+           // playGame()
             
         }
         
@@ -209,6 +214,25 @@ class QuizViewController: UIViewController {
         } else {
             playAww.play()
         }
+        
+    }
+    
+    func showAlert() {
+    
+        let alertController = UIAlertController(title: "Sorry", message: correctAnswer, preferredStyle: .Alert)
+        
+        // Initialize Actions
+        let yesAction = UIAlertAction(title: "Ok", style: .Default) { (action) -> Void in
+            
+            self.playGame()
+            
+        }
+        
+        // Add Actions
+        alertController.addAction(yesAction)
+        
+        // Present Alert Controller
+        self.presentViewController(alertController, animated: true, completion: nil)
         
     }
 }
