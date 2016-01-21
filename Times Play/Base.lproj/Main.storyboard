@@ -167,6 +167,9 @@
                                 <state key="normal" title="144">
                                     <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonViewsPressed:" destination="1cK-md-boJ" eventType="touchUpInside" id="eKK-hX-B7s"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7H-9A-aaZ">
                                 <rect key="frame" x="305" y="143" width="100" height="100"/>
@@ -178,6 +181,9 @@
                                 <state key="normal" title="144">
                                     <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonViewsPressed:" destination="1cK-md-boJ" eventType="touchUpInside" id="ghf-du-y9T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W6-fs-zNN">
                                 <rect key="frame" x="195" y="253" width="100" height="100"/>
@@ -189,6 +195,9 @@
                                 <state key="normal" title="144">
                                     <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonViewsPressed:" destination="1cK-md-boJ" eventType="touchUpInside" id="u4v-S4-HJE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNd-GC-uZl">
                                 <rect key="frame" x="305" y="253" width="100" height="100"/>
@@ -200,6 +209,9 @@
                                 <state key="normal" title="144">
                                     <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonViewsPressed:" destination="1cK-md-boJ" eventType="touchUpInside" id="liT-uX-b7Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,6 +245,11 @@
                         <outlet property="currentScore" destination="lVm-Iq-6ue" id="U5x-zg-9DN"/>
                         <outlet property="numberOfQuestions" destination="Ebm-of-5am" id="jG9-gF-yCV"/>
                         <outlet property="questionText" destination="HIC-1U-HPc" id="git-vJ-DP6"/>
+                        <outletCollection property="buttonViews" destination="i4G-b9-2FB" collectionClass="NSMutableArray" id="ar9-fT-0gd"/>
+                        <outletCollection property="buttonViews" destination="A7H-9A-aaZ" collectionClass="NSMutableArray" id="HsH-ba-9BI"/>
+                        <outletCollection property="buttonViews" destination="8W6-fs-zNN" collectionClass="NSMutableArray" id="E22-af-5RC"/>
+                        <outletCollection property="buttonViews" destination="hNd-GC-uZl" collectionClass="NSMutableArray" id="DvY-IA-C8I"/>
+                        <outletCollection property="imageViews" destination="XCv-wv-uZg" id="lRy-3S-5GS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uY-y7-sMD" userLabel="First Responder" sceneMemberID="firstResponder"/>

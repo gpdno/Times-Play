@@ -11,11 +11,11 @@ import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var multiplicationFactor = 0
-    
     var playCheer: AVAudioPlayer = AVAudioPlayer()
     
     var playAww: AVAudioPlayer = AVAudioPlayer()
+    
+    var multiplicationFactor = String()
     
     @IBOutlet var pickerView: UIPickerView!
     
@@ -40,11 +40,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
         playCheer.prepareToPlay()
         playAww.prepareToPlay()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     let pickerData = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"]
@@ -79,40 +74,40 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         switch value {
             
         case "One":
-            multiplicationFactor = 1
+            multiplicationFactor = "1"
             
         case "Two":
-            multiplicationFactor = 2
+            multiplicationFactor = "2"
             
         case "Three":
-            multiplicationFactor = 3
+            multiplicationFactor = "3"
             
         case "Four":
-            multiplicationFactor = 4
+            multiplicationFactor = "4"
             
         case "Five":
-            multiplicationFactor = 5
+            multiplicationFactor = "5"
             
         case "Six":
-            multiplicationFactor = 6
+            multiplicationFactor = "6"
             
         case "Seven":
-            multiplicationFactor = 7
+            multiplicationFactor = "7"
             
         case "Eight":
-            multiplicationFactor = 8
+            multiplicationFactor = "8"
             
         case "Nine":
-            multiplicationFactor = 9
+            multiplicationFactor = "9"
             
         case "Ten":
-            multiplicationFactor = 10
+            multiplicationFactor = "10"
             
         case "Eleven":
-            multiplicationFactor = 11
+            multiplicationFactor = "11"
             
         default:
-            multiplicationFactor = 12
+            multiplicationFactor = "12"
             
         }
     }
@@ -129,6 +124,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         } else {
             playAww.play()
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let secondViewController: QuizViewController = segue.destinationViewController as! QuizViewController
+        
+        secondViewController.passedMultiplicationNumber = multiplicationFactor
     }
 
 }
