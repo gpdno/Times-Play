@@ -49,7 +49,6 @@ class QuizViewController: UIViewController {
     
     @IBOutlet var questionText: UILabel!
     
-    
     @IBAction func pressButtonOne(sender: UIButton) {
         
         let buttonValueInt = Int(buttonOne.currentTitle!)!
@@ -202,7 +201,7 @@ class QuizViewController: UIViewController {
         let imageViewTwo = UIImageView(image: newArrayImages[1])
         let imageViewThree = UIImageView(image: newArrayImages[2])
         let imageViewFour = UIImageView(image: newArrayImages[3])
-        
+            
         imageOne.addSubview(imageViewOne)
         imageTwo.addSubview(imageViewTwo)
         imageThree.addSubview(imageViewThree)
