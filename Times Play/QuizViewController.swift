@@ -33,7 +33,7 @@ class QuizViewController: UIViewController {
     
     var imageArray = [1, 2, 3, 4]
     
-//    var imageArray: [UIImage] = [UIImage(named: "star.png")!, UIImage(named: "circle.png")!, UIImage(named: "square.png")!, UIImage(named: "polygon.png")!]
+    //    var imageArray: [UIImage] = [UIImage(named: "star.png")!, UIImage(named: "circle.png")!, UIImage(named: "square.png")!, UIImage(named: "polygon.png")!]
     
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
@@ -187,7 +187,6 @@ class QuizViewController: UIViewController {
         
     }
     
-    
     func setButtons() {
         
         let newArray = randomArray.shuffle()
@@ -201,11 +200,6 @@ class QuizViewController: UIViewController {
         
         print(newArrayImages[0])
         
-//        let imageViewOne = UIImageView(image: newArrayImages[0])
-//        let imageViewTwo = UIImageView(image: newArrayImages[1])
-//        let imageViewThree = UIImageView(image: newArrayImages[2])
-//        let imageViewFour = UIImageView(image: newArrayImages[3])
-//            
         imageOne.image = GetImage(newArrayImages[0])
         imageTwo.image = GetImage(newArrayImages[1])
         imageThree.image = GetImage(newArrayImages[2])
@@ -228,20 +222,11 @@ class QuizViewController: UIViewController {
             imageName = "polygon"
             
         }
-//        if (Value == 1)
-//        {
-//            imageName = "star"
-//        }
-//        else if (Value == 2)
-//        {
-//            imageName = "circle" //again, this is the actual name of my image
-//        }
         
-        //Return an image constructed from what existed in my images folder based on logic above
         return UIImage(named: (imageName))!
         
     }
-
+    
     
     func playSfx(name: String) {
         
