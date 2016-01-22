@@ -17,13 +17,9 @@ class QuizViewController: UIViewController {
     
     var passedMultiplicationNumber = String()
     
-    //    var title = String()
-    //
-    //    var correctAnswer = String()
-    
     var randomResult = Int()
     
-    let numberOfRounds = 10
+    let numberOfRounds = 25
     
     var currentRound = 1
     
@@ -33,7 +29,6 @@ class QuizViewController: UIViewController {
     
     var imageArray = [1, 2, 3, 4]
     
-    //    var imageArray: [UIImage] = [UIImage(named: "star.png")!, UIImage(named: "circle.png")!, UIImage(named: "square.png")!, UIImage(named: "polygon.png")!]
     
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
@@ -213,13 +208,13 @@ class QuizViewController: UIViewController {
         
         switch Value {
         case 1:
-            imageName = "star"
+            imageName = "Star"
         case 2:
-            imageName = "circle"
+            imageName = "Circle"
         case 3:
-            imageName = "square"
+            imageName = "Square"
         default:
-            imageName = "polygon"
+            imageName = "Polygon"
             
         }
         
