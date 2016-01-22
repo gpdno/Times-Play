@@ -93,11 +93,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fds-XT-gL9">
                                         <rect key="frame" x="0.0" y="0.0" width="248" height="114"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZF-rR-8mn">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="GZF-rR-8mn">
                                                 <rect key="frame" x="0.0" y="0.0" width="114" height="114"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="114" id="BZ3-En-qsH"/>
+                                                    <constraint firstAttribute="width" constant="114" id="bUc-Y9-DHe"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZi-UY-QSP">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="polygon.png" translatesAutoresizingMaskIntoConstraints="NO" id="BZi-UY-QSP">
                                                 <rect key="frame" x="134" y="0.0" width="114" height="114"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="114" id="Mxf-Q1-sHG"/>
+                                                    <constraint firstAttribute="height" constant="114" id="qcr-LX-FNu"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -108,11 +116,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JaT-oY-QkS">
                                         <rect key="frame" x="0.0" y="134" width="248" height="114"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hYM-nh-vhR">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="hYM-nh-vhR">
                                                 <rect key="frame" x="0.0" y="0.0" width="114" height="114"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="114" id="TN4-SI-Hba"/>
+                                                    <constraint firstAttribute="height" constant="114" id="UGr-3M-Da4"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5tZ-Zk-lC7">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.png" translatesAutoresizingMaskIntoConstraints="NO" id="5tZ-Zk-lC7">
                                                 <rect key="frame" x="134" y="0.0" width="114" height="114"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="114" id="LzS-Mm-vzP"/>
+                                                    <constraint firstAttribute="height" constant="114" id="lEX-uM-Jc5"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -140,7 +156,7 @@
                                 <rect key="frame" x="64" y="141" width="59" height="61"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="34"/>
                                 <state key="normal" title="144">
-                                    <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressButtonOne:" destination="1cK-md-boJ" eventType="touchUpInside" id="RPz-1w-d7H"/>
@@ -150,7 +166,7 @@
                                 <rect key="frame" x="198" y="141" width="59" height="61"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="34"/>
                                 <state key="normal" title="144">
-                                    <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressButtonTwo:" destination="1cK-md-boJ" eventType="touchUpInside" id="nU5-rd-HbS"/>
@@ -160,7 +176,7 @@
                                 <rect key="frame" x="64" y="275" width="59" height="61"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="34"/>
                                 <state key="normal" title="144">
-                                    <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressButtonThree:" destination="1cK-md-boJ" eventType="touchUpInside" id="byZ-X7-ZzS"/>
@@ -170,7 +186,7 @@
                                 <rect key="frame" x="198" y="275" width="59" height="61"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="34"/>
                                 <state key="normal" title="144">
-                                    <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressButtonFour:" destination="1cK-md-boJ" eventType="touchUpInside" id="LDb-QR-2OX"/>
@@ -249,6 +265,10 @@
     <resources>
         <image name="Times-Play.png" width="522" height="104"/>
         <image name="chalkboard.jpg" width="801" height="750"/>
+        <image name="circle.png" width="100" height="100"/>
         <image name="play.png" width="272" height="268"/>
+        <image name="polygon.png" width="100" height="100"/>
+        <image name="square.png" width="100" height="100"/>
+        <image name="star.png" width="100" height="100"/>
     </resources>
 </document>

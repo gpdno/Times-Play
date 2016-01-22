@@ -31,7 +31,9 @@ class QuizViewController: UIViewController {
     
     var randomArray = [0, 0, 0, 0]
     
-    var imageArray: [UIImage] = [UIImage(named: "star.png")!, UIImage(named: "circle.png")!, UIImage(named: "square.png")!, UIImage(named: "polygon.png")!]
+    var imageArray = [1, 2, 3, 4]
+    
+//    var imageArray: [UIImage] = [UIImage(named: "star.png")!, UIImage(named: "circle.png")!, UIImage(named: "square.png")!, UIImage(named: "polygon.png")!]
     
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
@@ -197,17 +199,49 @@ class QuizViewController: UIViewController {
         
         let newArrayImages = imageArray.shuffle()
         
-        let imageViewOne = UIImageView(image: newArrayImages[0])
-        let imageViewTwo = UIImageView(image: newArrayImages[1])
-        let imageViewThree = UIImageView(image: newArrayImages[2])
-        let imageViewFour = UIImageView(image: newArrayImages[3])
-            
-        imageOne.addSubview(imageViewOne)
-        imageTwo.addSubview(imageViewTwo)
-        imageThree.addSubview(imageViewThree)
-        imageFour.addSubview(imageViewFour)
+        print(newArrayImages[0])
+        
+//        let imageViewOne = UIImageView(image: newArrayImages[0])
+//        let imageViewTwo = UIImageView(image: newArrayImages[1])
+//        let imageViewThree = UIImageView(image: newArrayImages[2])
+//        let imageViewFour = UIImageView(image: newArrayImages[3])
+//            
+        imageOne.image = GetImage(newArrayImages[0])
+        imageTwo.image = GetImage(newArrayImages[1])
+        imageThree.image = GetImage(newArrayImages[2])
+        imageFour.image = GetImage(newArrayImages[3])
         
     }
+    
+    func GetImage(Value: Int)->UIImage {
+        
+        var imageName: String = ""
+        
+        switch Value {
+        case 1:
+            imageName = "star"
+        case 2:
+            imageName = "circle"
+        case 3:
+            imageName = "square"
+        default:
+            imageName = "polygon"
+            
+        }
+//        if (Value == 1)
+//        {
+//            imageName = "star"
+//        }
+//        else if (Value == 2)
+//        {
+//            imageName = "circle" //again, this is the actual name of my image
+//        }
+        
+        //Return an image constructed from what existed in my images folder based on logic above
+        return UIImage(named: (imageName))!
+        
+    }
+
     
     func playSfx(name: String) {
         
