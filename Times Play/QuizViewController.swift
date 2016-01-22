@@ -19,7 +19,7 @@ class QuizViewController: UIViewController {
     
     var randomResult = Int()
     
-    let numberOfRounds = 25
+    let numberOfRounds = 15
     
     var currentRound = 1
     
@@ -208,13 +208,13 @@ class QuizViewController: UIViewController {
         
         switch Value {
         case 1:
-            imageName = "Star"
+            imageName = "star"
         case 2:
-            imageName = "Circle"
+            imageName = "circle"
         case 3:
-            imageName = "Square"
+            imageName = "square"
         default:
-            imageName = "Polygon"
+            imageName = "polygon"
             
         }
         
