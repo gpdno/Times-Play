@@ -15,13 +15,13 @@
 		8D5351B51C4F193D009AFBC6 /* chalkboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351B01C4F193D009AFBC6 /* chalkboard.jpg */; };
 		8D5351B61C4F193D009AFBC6 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351B11C4F193D009AFBC6 /* circle.png */; };
 		8D5351B71C4F193D009AFBC6 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351B21C4F193D009AFBC6 /* play.png */; };
-		8D5351B81C4F193D009AFBC6 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351B31C4F193D009AFBC6 /* square.png */; };
 		8D5351B91C4F193D009AFBC6 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351B41C4F193D009AFBC6 /* star.png */; };
 		8D5351BC1C4F1945009AFBC6 /* Times-Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351BA1C4F1945009AFBC6 /* Times-Play.png */; };
-		8D5351BD1C4F1945009AFBC6 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351BB1C4F1945009AFBC6 /* triangle.png */; };
 		8D5351C51C4F2560009AFBC6 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5351C41C4F2560009AFBC6 /* QuizViewController.swift */; };
 		8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */; };
 		8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */; };
+		8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC83791C51BAF000F0C72E /* polygon.png */; };
+		8DEC837C1C51BC0800F0C72E /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC837B1C51BC0800F0C72E /* square.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +35,13 @@
 		8D5351B01C4F193D009AFBC6 /* chalkboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chalkboard.jpg; sourceTree = "<group>"; };
 		8D5351B11C4F193D009AFBC6 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		8D5351B21C4F193D009AFBC6 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		8D5351B31C4F193D009AFBC6 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		8D5351B41C4F193D009AFBC6 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		8D5351BA1C4F1945009AFBC6 /* Times-Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Times-Play.png"; sourceTree = "<group>"; };
-		8D5351BB1C4F1945009AFBC6 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
 		8D5351C41C4F2560009AFBC6 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheer.m4a; sourceTree = "<group>"; };
 		8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aww.m4a; sourceTree = "<group>"; };
+		8DEC83791C51BAF000F0C72E /* polygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polygon.png; sourceTree = "<group>"; };
+		8DEC837B1C51BC0800F0C72E /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +90,13 @@
 		8D5351C01C4F1957009AFBC6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8DEC837B1C51BC0800F0C72E /* square.png */,
 				8D5351B01C4F193D009AFBC6 /* chalkboard.jpg */,
 				8D5351B11C4F193D009AFBC6 /* circle.png */,
 				8D5351B21C4F193D009AFBC6 /* play.png */,
-				8D5351B31C4F193D009AFBC6 /* square.png */,
+				8DEC83791C51BAF000F0C72E /* polygon.png */,
 				8D5351B41C4F193D009AFBC6 /* star.png */,
 				8D5351BA1C4F1945009AFBC6 /* Times-Play.png */,
-				8D5351BB1C4F1945009AFBC6 /* triangle.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -142,6 +142,7 @@
 				TargetAttributes = {
 					8D53519A1C4F191E009AFBC6 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = AUW28E79X4;
 					};
 				};
 			};
@@ -169,16 +170,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5351B51C4F193D009AFBC6 /* chalkboard.jpg in Resources */,
-				8D5351BD1C4F1945009AFBC6 /* triangle.png in Resources */,
 				8D5351A91C4F191E009AFBC6 /* LaunchScreen.storyboard in Resources */,
+				8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */,
 				8D5351BC1C4F1945009AFBC6 /* Times-Play.png in Resources */,
 				8D5351B61C4F193D009AFBC6 /* circle.png in Resources */,
-				8D5351B81C4F193D009AFBC6 /* square.png in Resources */,
 				8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */,
 				8D5351A61C4F191E009AFBC6 /* Assets.xcassets in Resources */,
 				8D5351B91C4F193D009AFBC6 /* star.png in Resources */,
 				8D5351A41C4F191E009AFBC6 /* Main.storyboard in Resources */,
 				8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */,
+				8DEC837C1C51BC0800F0C72E /* square.png in Resources */,
 				8D5351B71C4F193D009AFBC6 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Times Play/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SCDE.Times-Play";
@@ -316,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Times Play/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SCDE.Times-Play";
