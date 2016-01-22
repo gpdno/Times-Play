@@ -29,6 +29,7 @@ class QuizViewController: UIViewController {
     
     var imageArray = [1, 2, 3, 4]
     
+    let image = SetImage()
     
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
@@ -193,35 +194,12 @@ class QuizViewController: UIViewController {
         
         let newArrayImages = imageArray.shuffle()
         
-        print(newArrayImages[0])
-        
-        imageOne.image = GetImage(newArrayImages[0])
-        imageTwo.image = GetImage(newArrayImages[1])
-        imageThree.image = GetImage(newArrayImages[2])
-        imageFour.image = GetImage(newArrayImages[3])
+        imageOne.image = image.GetImage(newArrayImages[0])
+        imageTwo.image = image.GetImage(newArrayImages[1])
+        imageThree.image = image.GetImage(newArrayImages[2])
+        imageFour.image = image.GetImage(newArrayImages[3])
         
     }
-    
-    func GetImage(Value: Int)->UIImage {
-        
-        var imageName: String = ""
-        
-        switch Value {
-        case 1:
-            imageName = "star"
-        case 2:
-            imageName = "circle"
-        case 3:
-            imageName = "square"
-        default:
-            imageName = "polygon"
-            
-        }
-        
-        return UIImage(named: (imageName))!
-        
-    }
-    
     
     func playSfx(name: String) {
         
@@ -240,7 +218,6 @@ class QuizViewController: UIViewController {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
-        // Initialize Actions
         let yesAction = UIAlertAction(title: "Ok", style: .Default) { (action) -> Void in
             
             if title == "Game Over" {
@@ -253,18 +230,13 @@ class QuizViewController: UIViewController {
             }
         }
         
-        // Add Actions
         alertController.addAction(yesAction)
         
-        // Present Alert Controller
         self.presentViewController(alertController, animated: true, completion: nil)
         
     }
     
-    
 }
-
-
 
 
 
