@@ -31,8 +31,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-Bh-NoA">
                                 <rect key="frame" x="125" y="522" width="125" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="qJH-c4-xdj"/>
-                                    <constraint firstAttribute="width" constant="125" id="qJt-Xp-akw"/>
+                                    <constraint firstAttribute="height" constant="125" id="qJH-c4-xdj">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="125" id="qJt-Xp-akw">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" image="play.png"/>
                                 <connections>
@@ -43,8 +47,12 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-JB-ou3" customClass="PickerView" customModule="Times_Play" customModuleProvider="target">
                                 <rect key="frame" x="113" y="137" width="150" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="jhh-X3-W16"/>
-                                    <constraint firstAttribute="height" constant="125" id="vjY-3n-vl1"/>
+                                    <constraint firstAttribute="width" constant="150" id="jhh-X3-W16">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="125" id="vjY-3n-vl1">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                             </pickerView>
                         </subviews>
@@ -57,13 +65,15 @@
                             <constraint firstItem="lfc-Bh-NoA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qwr-eR-4MJ"/>
                             <constraint firstItem="eiR-M9-whI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UG7-5b-yDu"/>
                             <constraint firstItem="Dkt-JB-ou3" firstAttribute="top" secondItem="eiR-M9-whI" secondAttribute="bottom" constant="39" id="c6i-lF-aMF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lfc-Bh-NoA" secondAttribute="bottom" constant="20" id="oWl-6v-uET"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lfc-Bh-NoA" secondAttribute="bottom" constant="20" id="oWl-6v-uET">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="2SQ-mY-2oO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="plJ-5A-VM5"/>
                             <constraint firstItem="eiR-M9-whI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sjW-9k-s8a"/>
                             <constraint firstItem="Dkt-JB-ou3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zjH-gT-OcD"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="pickerView" destination="Dkt-JB-ou3" id="E3m-FG-XzA"/>
                     </connections>
@@ -281,6 +291,9 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                             </constraint>
                             <constraint firstItem="HIC-1U-HPc" firstAttribute="centerX" secondItem="2hz-K3-Dnj" secondAttribute="centerX" id="afD-Wx-7qU"/>
+                            <constraint firstItem="HIC-1U-HPc" firstAttribute="top" secondItem="5GA-57-iFe" secondAttribute="bottom" constant="320" id="any-Sr-BT9">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="5GA-57-iFe" secondAttribute="trailing" constant="20" id="c9y-DN-1Bg">
                                 <variation key="heightClass=regular-widthClass=regular" constant="125"/>
                             </constraint>
@@ -293,9 +306,20 @@
                             <constraint firstItem="5ei-d9-0u4" firstAttribute="top" secondItem="mmH-nd-Lrc" secondAttribute="bottom" id="wvw-Vr-p57"/>
                             <constraint firstAttribute="trailing" secondItem="mmH-nd-Lrc" secondAttribute="trailing" id="zrz-OT-PNr"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="any-Sr-BT9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="any-Sr-BT9"/>
+                                <exclude reference="hpt-Mq-ixE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="buttonFour" destination="38o-DZ-VY1" id="uM0-Bt-2HK"/>
                         <outlet property="buttonOne" destination="hVC-e6-YpY" id="bqL-EY-Jbj"/>
