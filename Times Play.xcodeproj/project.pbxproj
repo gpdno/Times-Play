@@ -22,6 +22,7 @@
 		8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */; };
 		8D8E5E1D1C52F13500998E68 /* SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E5E1C1C52F13500998E68 /* SetImage.swift */; };
 		8D8E5E1F1C53058000998E68 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E1E1C53058000998E68 /* square.png */; };
+		8D8E5E211C5315B400998E68 /* SCDE Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E201C5315B400998E68 /* SCDE Logo.png */; };
 		8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC83791C51BAF000F0C72E /* polygon.png */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aww.m4a; sourceTree = "<group>"; };
 		8D8E5E1C1C52F13500998E68 /* SetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetImage.swift; sourceTree = "<group>"; };
 		8D8E5E1E1C53058000998E68 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		8D8E5E201C5315B400998E68 /* SCDE Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SCDE Logo.png"; sourceTree = "<group>"; };
 		8DEC83791C51BAF000F0C72E /* polygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polygon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				8D5351B01C4F193D009AFBC6 /* chalkboard.jpg */,
 				8D5351B11C4F193D009AFBC6 /* circle.png */,
+				8D8E5E201C5315B400998E68 /* SCDE Logo.png */,
 				8D5351B21C4F193D009AFBC6 /* play.png */,
 				8DEC83791C51BAF000F0C72E /* polygon.png */,
 				8D5351B41C4F193D009AFBC6 /* star.png */,
@@ -182,6 +185,7 @@
 				8D5351B91C4F193D009AFBC6 /* star.png in Resources */,
 				8D5351A41C4F191E009AFBC6 /* Main.storyboard in Resources */,
 				8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */,
+				8D8E5E211C5315B400998E68 /* SCDE Logo.png in Resources */,
 				8D8E5E1F1C53058000998E68 /* square.png in Resources */,
 				8D5351B71C4F193D009AFBC6 /* play.png in Resources */,
 			);
