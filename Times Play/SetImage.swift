@@ -22,7 +22,7 @@ class SetImage {
         case 3:
             assetName = "star"
         case 4:
-            assetName = "square"
+            assetName = "roundsquare"
         default:
             break
         }

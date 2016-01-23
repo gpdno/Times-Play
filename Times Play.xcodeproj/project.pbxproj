@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D253C2C1C53520F00911B87 /* roundsquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D253C2B1C53520F00911B87 /* roundsquare.png */; };
 		8D53519F1C4F191E009AFBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53519E1C4F191E009AFBC6 /* AppDelegate.swift */; };
 		8D5351A11C4F191E009AFBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5351A01C4F191E009AFBC6 /* ViewController.swift */; };
 		8D5351A41C4F191E009AFBC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351A21C4F191E009AFBC6 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D253C2B1C53520F00911B87 /* roundsquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roundsquare.png; sourceTree = "<group>"; };
 		8D53519B1C4F191E009AFBC6 /* Times Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Times Play.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D53519E1C4F191E009AFBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D5351A01C4F191E009AFBC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5351B01C4F193D009AFBC6 /* chalkboard.jpg */,
+				8D253C2B1C53520F00911B87 /* roundsquare.png */,
 				8D8E5E301C5345D400998E68 /* okButton.png */,
 				8D5351B11C4F193D009AFBC6 /* circle.png */,
 				8D8E5E201C5315B400998E68 /* SCDE Logo.png */,
@@ -200,6 +203,7 @@
 				8D5351A91C4F191E009AFBC6 /* LaunchScreen.storyboard in Resources */,
 				8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */,
 				8D8E5E281C532AC700998E68 /* silver medal.png in Resources */,
+				8D253C2C1C53520F00911B87 /* roundsquare.png in Resources */,
 				8D5351BC1C4F1945009AFBC6 /* Times-Play.png in Resources */,
 				8D5351B61C4F193D009AFBC6 /* circle.png in Resources */,
 				8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */,

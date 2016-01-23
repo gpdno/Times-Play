@@ -243,7 +243,6 @@ class QuizViewController: UIViewController {
         thirdViewController.passedNumberCorrect = numberCorrect
     }
 
-    
 }
 
 

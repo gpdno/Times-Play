@@ -169,7 +169,7 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.png" translatesAutoresizingMaskIntoConstraints="NO" id="5tZ-Zk-lC7">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundsquare.png" translatesAutoresizingMaskIntoConstraints="NO" id="5tZ-Zk-lC7">
                                                 <rect key="frame" x="162" y="0.0" width="141" height="141"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="114" id="LzS-Mm-vzP"/>
@@ -419,7 +419,7 @@
         <image name="play.png" width="400" height="400"/>
         <image name="polygon.png" width="100" height="100"/>
         <image name="ribbon.png" width="121" height="350"/>
-        <image name="square.png" width="100" height="100"/>
+        <image name="roundsquare.png" width="100" height="100"/>
         <image name="star.png" width="100" height="100"/>
     </resources>
 </document>
