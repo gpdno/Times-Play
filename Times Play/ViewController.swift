@@ -20,7 +20,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet var pickerView: UIPickerView!
     
     @IBAction func playButtonPressed(sender: AnyObject) {
-        
 
     }
     override func viewDidLoad() {
@@ -62,7 +61,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = pickerData[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Chalkboard SE", size: 8.0)!,NSForegroundColorAttributeName:UIColor.brownColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Chalkboard SE", size: 14.0)!,NSForegroundColorAttributeName:UIColor.brownColor()])
         pickerView.backgroundColor = UIColor(colorLiteralRed: 125, green: 200, blue: 150, alpha: 0.6)
         pickerView.layer.cornerRadius = 10
         return myTitle
