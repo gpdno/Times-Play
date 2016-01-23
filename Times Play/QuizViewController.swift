@@ -107,7 +107,6 @@ class QuizViewController: UIViewController {
         playGame()
     }
     
-    
     func playGame() {
         
         if currentRound <= numberOfRounds {
@@ -222,7 +221,7 @@ class QuizViewController: UIViewController {
             
             if title == "Game Over" {
                 
-                self.performSegueWithIdentifier("backToPlay", sender: self)
+                self.performSegueWithIdentifier("toAwards", sender: self)
                 
             } else {
                 
@@ -235,6 +234,15 @@ class QuizViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let thirdViewController: AwardViewController = segue.destinationViewController as! AwardViewController
+        
+        thirdViewController.passedNumberOfRounds = numberOfRounds
+        thirdViewController.passedNumberCorrect = numberCorrect
+    }
+
     
 }
 

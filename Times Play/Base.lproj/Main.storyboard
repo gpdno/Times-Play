@@ -334,20 +334,91 @@
                         <outlet property="imageTwo" destination="BZi-UY-QSP" id="qTE-Ux-lTv"/>
                         <outlet property="numberOfQuestions" destination="Ebm-of-5am" id="jG9-gF-yCV"/>
                         <outlet property="questionText" destination="HIC-1U-HPc" id="git-vJ-DP6"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToPlay" id="NBr-hO-weX"/>
+                        <segue destination="SZP-He-utV" kind="show" identifier="toAwards" id="dHr-mQ-Z2n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uY-y7-sMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412.5" y="326.5"/>
+            <point key="canvasLocation" x="367.5" y="326.5"/>
+        </scene>
+        <!--Award View Controller-->
+        <scene sceneID="RCo-IF-QYS">
+            <objects>
+                <viewController id="SZP-He-utV" customClass="AwardViewController" customModule="Times_Play" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d27-6p-hFr"/>
+                        <viewControllerLayoutGuide type="bottom" id="sjE-kf-Nqy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZBB-M5-lsg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lKg-Gm-SmL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g55-OR-iZw">
+                                <rect key="frame" x="81" y="45" width="213" height="597"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="5f9-E7-kgh">
+                                        <rect key="frame" x="46" y="0.0" width="122" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="7PS-D0-zFR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="48"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ribbon.png" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-aG-NCQ">
+                                        <rect key="frame" x="0.0" y="70" width="213" height="427"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rgj-aG-NCQ" secondAttribute="height" multiplier="1:2" id="1D4-8d-2GH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4II-A3-lxT">
+                                        <rect key="frame" x="57" y="497" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="4II-A3-lxT" secondAttribute="height" multiplier="1:1" id="Tpg-Jj-jXF"/>
+                                            <constraint firstAttribute="height" constant="100" id="wuH-dg-NWh"/>
+                                        </constraints>
+                                        <state key="normal" image="okButton.png"/>
+                                        <connections>
+                                            <action selector="homeButtonPressed:" destination="SZP-He-utV" eventType="touchUpInside" id="VAG-T9-dvI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lKg-Gm-SmL" firstAttribute="top" secondItem="ZBB-M5-lsg" secondAttribute="top" id="1FY-BT-IeW"/>
+                            <constraint firstItem="sjE-kf-Nqy" firstAttribute="top" secondItem="lKg-Gm-SmL" secondAttribute="bottom" id="BUk-hd-cWL"/>
+                            <constraint firstItem="lKg-Gm-SmL" firstAttribute="leading" secondItem="ZBB-M5-lsg" secondAttribute="leading" id="XWM-zf-tb2"/>
+                            <constraint firstItem="g55-OR-iZw" firstAttribute="top" secondItem="d27-6p-hFr" secondAttribute="bottom" constant="25" id="YQC-g1-Aj7"/>
+                            <constraint firstAttribute="trailing" secondItem="lKg-Gm-SmL" secondAttribute="trailing" id="ftC-Sk-bx2"/>
+                            <constraint firstItem="g55-OR-iZw" firstAttribute="centerX" secondItem="ZBB-M5-lsg" secondAttribute="centerX" id="pQr-EQ-pCs"/>
+                            <constraint firstItem="sjE-kf-Nqy" firstAttribute="top" secondItem="g55-OR-iZw" secondAttribute="bottom" constant="25" id="va3-6G-Bvu"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="awardImage" destination="rgj-aG-NCQ" id="U9q-3e-SOK"/>
+                        <outlet property="finalScoreText" destination="5f9-E7-kgh" id="lv1-Vd-EXZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToPlay" id="oqt-n6-9OS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3oM-wS-peW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367.5" y="1097.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="Times-Play.png" width="522" height="104"/>
         <image name="chalkboard.jpg" width="801" height="750"/>
         <image name="circle.png" width="100" height="100"/>
+        <image name="okButton.png" width="400" height="400"/>
         <image name="play.png" width="400" height="400"/>
         <image name="polygon.png" width="100" height="100"/>
+        <image name="ribbon.png" width="121" height="350"/>
         <image name="square.png" width="100" height="100"/>
         <image name="star.png" width="100" height="100"/>
     </resources>
