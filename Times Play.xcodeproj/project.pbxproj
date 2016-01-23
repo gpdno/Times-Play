@@ -21,8 +21,11 @@
 		8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */; };
 		8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */; };
 		8D8E5E1D1C52F13500998E68 /* SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E5E1C1C52F13500998E68 /* SetImage.swift */; };
-		8D8E5E1F1C53058000998E68 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E1E1C53058000998E68 /* square.png */; };
 		8D8E5E211C5315B400998E68 /* SCDE Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E201C5315B400998E68 /* SCDE Logo.png */; };
+		8D8E5E261C532AC700998E68 /* bronze medal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E221C532AC700998E68 /* bronze medal.png */; };
+		8D8E5E271C532AC700998E68 /* gold medal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E231C532AC700998E68 /* gold medal.png */; };
+		8D8E5E281C532AC700998E68 /* silver medal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E241C532AC700998E68 /* silver medal.png */; };
+		8D8E5E291C532AC700998E68 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E251C532AC700998E68 /* square.png */; };
 		8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC83791C51BAF000F0C72E /* polygon.png */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +46,11 @@
 		8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheer.m4a; sourceTree = "<group>"; };
 		8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aww.m4a; sourceTree = "<group>"; };
 		8D8E5E1C1C52F13500998E68 /* SetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetImage.swift; sourceTree = "<group>"; };
-		8D8E5E1E1C53058000998E68 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		8D8E5E201C5315B400998E68 /* SCDE Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SCDE Logo.png"; sourceTree = "<group>"; };
+		8D8E5E221C532AC700998E68 /* bronze medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bronze medal.png"; sourceTree = "<group>"; };
+		8D8E5E231C532AC700998E68 /* gold medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gold medal.png"; sourceTree = "<group>"; };
+		8D8E5E241C532AC700998E68 /* silver medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "silver medal.png"; sourceTree = "<group>"; };
+		8D8E5E251C532AC700998E68 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		8DEC83791C51BAF000F0C72E /* polygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polygon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +107,10 @@
 				8D5351B21C4F193D009AFBC6 /* play.png */,
 				8DEC83791C51BAF000F0C72E /* polygon.png */,
 				8D5351B41C4F193D009AFBC6 /* star.png */,
-				8D8E5E1E1C53058000998E68 /* square.png */,
+				8D8E5E221C532AC700998E68 /* bronze medal.png */,
+				8D8E5E231C532AC700998E68 /* gold medal.png */,
+				8D8E5E241C532AC700998E68 /* silver medal.png */,
+				8D8E5E251C532AC700998E68 /* square.png */,
 				8D5351BA1C4F1945009AFBC6 /* Times-Play.png */,
 			);
 			name = Images;
@@ -178,6 +187,7 @@
 				8D5351B51C4F193D009AFBC6 /* chalkboard.jpg in Resources */,
 				8D5351A91C4F191E009AFBC6 /* LaunchScreen.storyboard in Resources */,
 				8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */,
+				8D8E5E281C532AC700998E68 /* silver medal.png in Resources */,
 				8D5351BC1C4F1945009AFBC6 /* Times-Play.png in Resources */,
 				8D5351B61C4F193D009AFBC6 /* circle.png in Resources */,
 				8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */,
@@ -186,7 +196,9 @@
 				8D5351A41C4F191E009AFBC6 /* Main.storyboard in Resources */,
 				8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */,
 				8D8E5E211C5315B400998E68 /* SCDE Logo.png in Resources */,
-				8D8E5E1F1C53058000998E68 /* square.png in Resources */,
+				8D8E5E261C532AC700998E68 /* bronze medal.png in Resources */,
+				8D8E5E271C532AC700998E68 /* gold medal.png in Resources */,
+				8D8E5E291C532AC700998E68 /* square.png in Resources */,
 				8D5351B71C4F193D009AFBC6 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
