@@ -11,6 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    var randomStatus = 1
+    
     var playCheer: AVAudioPlayer = AVAudioPlayer()
     
     var playAww: AVAudioPlayer = AVAudioPlayer()
@@ -19,8 +21,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet var pickerView: UIPickerView!
     
+    @IBOutlet var randomSwitch: UISwitch!
+    
     @IBAction func playButtonPressed(sender: AnyObject) {
+        
+        if randomSwitch.on {
+            randomStatus = 1
 
+        } else {
+            randomStatus = 0
+
+        }
+        print("VCone is \(randomStatus)")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,6 +143,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let secondViewController: QuizViewController = segue.destinationViewController as! QuizViewController
         
         secondViewController.passedMultiplicationNumber = multiplicationFactor
+        secondViewController.passedRandomStatus = randomStatus
     }
 
 }

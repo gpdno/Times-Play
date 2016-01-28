@@ -17,9 +17,11 @@ class QuizViewController: UIViewController {
     
     var passedMultiplicationNumber = String()
     
+    var passedRandomStatus = Int()
+    
     var randomResult = Int()
     
-    let numberOfRounds = 15
+    var numberOfRounds = Int()
     
     var currentRound = 1
     
@@ -79,6 +81,17 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("VCtwo is \(passedRandomStatus)")
+        print(passedMultiplicationNumber)
+        
+        if passedRandomStatus == 1 {
+            numberOfRounds = 20
+            
+        } else {
+            numberOfRounds = 12
+            
+        }
+        
         let audioPathCheer = NSBundle.mainBundle().pathForResource("Cheer", ofType: "m4a")!
         
         do {
@@ -111,11 +124,16 @@ class QuizViewController: UIViewController {
         
         if currentRound <= numberOfRounds {
             
+            if passedRandomStatus == 1 {
+                guessRandomValues()
+                
+            } else {
+                guessOrderValues()
+            }
+            
             numberOfQuestions.text = "Questions: \(currentRound) of \(numberOfRounds)"
             
             currentRound++
-            
-            guessValues()
             
             setButtons()
             
@@ -139,7 +157,7 @@ class QuizViewController: UIViewController {
     }
     
     
-    func guessValues() {
+    func guessRandomValues() {
         
         randomResult = (Int(arc4random_uniform(12)) + 1)
         
@@ -155,6 +173,19 @@ class QuizViewController: UIViewController {
         
     }
     
+    func guessOrderValues() {
+        
+        randomArray[0] = currentRound * Int(passedMultiplicationNumber)!
+        
+        for i in 1...3 {
+            
+            randomArray[i] = Int(arc4random_uniform(144)) + 1
+            
+        }
+        
+        questionText.text = "\(passedMultiplicationNumber) X \(currentRound)"
+        
+    }
     
     func checkForResults(a: Int) {
         
@@ -242,7 +273,7 @@ class QuizViewController: UIViewController {
         thirdViewController.passedNumberOfRounds = numberOfRounds
         thirdViewController.passedNumberCorrect = numberCorrect
     }
-
+    
 }
 
 
