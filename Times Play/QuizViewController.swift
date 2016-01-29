@@ -82,14 +82,17 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         
         print("VCtwo is \(passedRandomStatus)")
-        print(passedMultiplicationNumber)
+        print(randomStatus)
         
-        if passedRandomStatus == 1 {
-            numberOfRounds = 20
-            
-        } else {
+        if passedRandomStatus == 0 {
             numberOfRounds = 12
+            print("if \(randomStatus) = true: randomStatus give 12")
             
+        } else if passedRandomStatus == 1{
+            numberOfRounds = 15
+            print("if \(randomStatus) = false: randomStatus give 15")
+        } else {
+            numberOfRounds = 20
         }
         
         let audioPathCheer = NSBundle.mainBundle().pathForResource("Cheer", ofType: "m4a")!
@@ -124,11 +127,11 @@ class QuizViewController: UIViewController {
         
         if currentRound <= numberOfRounds {
             
-            if passedRandomStatus == 1 {
-                guessRandomValues()
+            if passedRandomStatus == 0 {
+                guessOrderValues()
                 
             } else {
-                guessOrderValues()
+                guessRandomValues()
             }
             
             numberOfQuestions.text = "Questions: \(currentRound) of \(numberOfRounds)"

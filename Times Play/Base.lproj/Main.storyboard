@@ -22,20 +22,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2SQ-mY-2oO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="r7f-IR-bGl">
-                                <rect key="frame" x="16" y="74" width="343" height="519"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="r7f-IR-bGl">
+                                <rect key="frame" x="16" y="74" width="343" height="517"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-wF-D1J">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="233"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="234"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Times-Play.png" translatesAutoresizingMaskIntoConstraints="NO" id="eiR-M9-whI">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="78"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="79"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="eiR-M9-whI" secondAttribute="height" multiplier="35:8" id="Kk8-IR-AsT"/>
                                                 </constraints>
                                             </imageView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-JB-ou3" customClass="PickerView" customModule="Times_Play" customModuleProvider="target">
-                                                <rect key="frame" x="97" y="108" width="150" height="125"/>
+                                                <rect key="frame" x="97" y="109" width="150" height="125"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="jhh-X3-W16">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="300"/>
@@ -48,38 +48,30 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-Tw-5Fc">
-                                        <rect key="frame" x="75" y="283" width="194" height="61"/>
+                                        <rect key="frame" x="39" y="284" width="266" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Factors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-GZ-hpK">
-                                                <rect key="frame" x="0.0" y="0.0" width="194" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="266" height="25"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-5R-DIY">
-                                                <rect key="frame" x="0.0" y="30" width="194" height="31"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Order" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxm-eH-ZYF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="31"/>
-                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
-                                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNU-4d-ldX">
-                                                        <rect key="frame" x="77" y="0.0" width="51" height="31"/>
-                                                    </switch>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEy-XF-24E">
-                                                        <rect key="frame" x="134" y="0.0" width="60" height="31"/>
-                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
-                                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ny8-uM-kMp" customClass="MySegmentedControl" customModule="Times_Play" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="266" height="29"/>
+                                                <segments>
+                                                    <segment title="In Order"/>
+                                                    <segment title="Random -15"/>
+                                                    <segment title="Random-20"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="factorSegmentSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZdY-fw-V1F"/>
+                                                </connections>
+                                            </segmentedControl>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-Bh-NoA">
-                                        <rect key="frame" x="109" y="394" width="125" height="125"/>
+                                        <rect key="frame" x="109" y="392" width="125" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="125" id="qJH-c4-xdj">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="250"/>
@@ -117,7 +109,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="pickerView" destination="Dkt-JB-ou3" id="E3m-FG-XzA"/>
-                        <outlet property="randomSwitch" destination="sNU-4d-ldX" id="8Rv-qH-eaI"/>
+                        <outlet property="segmentControl" destination="ny8-uM-kMp" id="lpa-BF-bnK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,10 +8,11 @@
 
 import UIKit
 import AVFoundation
+var randomStatus = Int()
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var randomStatus = 1
+    //var randomStatus = Int()
     
     var playCheer: AVAudioPlayer = AVAudioPlayer()
     
@@ -21,18 +22,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet var pickerView: UIPickerView!
     
-    @IBOutlet var randomSwitch: UISwitch!
+    @IBOutlet var segmentControl: UISegmentedControl!
     
-    @IBAction func playButtonPressed(sender: AnyObject) {
+    @IBAction func factorSegmentSelect(sender: UISegmentedControl) {
         
-        if randomSwitch.on {
-            randomStatus = 1
-
-        } else {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            print("run in order")
             randomStatus = 0
-
+        case 1:
+            print("random 15")
+            randomStatus = 1
+        default:
+            print("random 20")
+            randomStatus = 2
         }
-        print("VCone is \(randomStatus)")
+    }
+    @IBAction func playButtonPressed(sender: AnyObject) {
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,6 +151,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         secondViewController.passedMultiplicationNumber = multiplicationFactor
         secondViewController.passedRandomStatus = randomStatus
+        print("passedRandomStatus = \(secondViewController.passedRandomStatus)")
+        print("randomStatus = \(randomStatus)")
     }
 
 }
