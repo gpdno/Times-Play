@@ -23,6 +23,10 @@ class SetImage {
             assetName = "star"
         case 4:
             assetName = "roundsquare"
+        case 5:
+            assetName = "hexagon"
+        case 6:
+            assetName = "triangle"
         default:
             break
         }

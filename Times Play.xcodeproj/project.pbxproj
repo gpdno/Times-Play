@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D2043FB1C5B171B004D19FE /* MySegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2043FA1C5B171B004D19FE /* MySegmentedControl.swift */; };
+		8D2043FF1C5B253D004D19FE /* hexagon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2043FE1C5B253D004D19FE /* hexagon.png */; };
+		8D2044011C5B254A004D19FE /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2044001C5B254A004D19FE /* triangle.png */; };
 		8D253C2C1C53520F00911B87 /* roundsquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D253C2B1C53520F00911B87 /* roundsquare.png */; };
 		8D53519F1C4F191E009AFBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53519E1C4F191E009AFBC6 /* AppDelegate.swift */; };
 		8D5351A11C4F191E009AFBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5351A01C4F191E009AFBC6 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		8D2043FA1C5B171B004D19FE /* MySegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySegmentedControl.swift; sourceTree = "<group>"; };
+		8D2043FE1C5B253D004D19FE /* hexagon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hexagon.png; sourceTree = "<group>"; };
+		8D2044001C5B254A004D19FE /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
 		8D253C2B1C53520F00911B87 /* roundsquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roundsquare.png; sourceTree = "<group>"; };
 		8D53519B1C4F191E009AFBC6 /* Times Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Times Play.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D53519E1C4F191E009AFBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D2043FC1C5B1A1F004D19FE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8D2043FA1C5B171B004D19FE /* MySegmentedControl.swift */,
+				8D8E5E1C1C52F13500998E68 /* SetImage.swift */,
+				8D8E5E2C1C53357400998E68 /* SetAward.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8D2043FD1C5B1A65004D19FE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8D53519E1C4F191E009AFBC6 /* AppDelegate.swift */,
+				8D5351A51C4F191E009AFBC6 /* Assets.xcassets */,
+				8D5351A71C4F191E009AFBC6 /* LaunchScreen.storyboard */,
+				8D5351AA1C4F191E009AFBC6 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		8D5351921C4F191E009AFBC6 = {
 			isa = PBXGroup;
 			children = (
@@ -98,17 +123,12 @@
 		8D53519D1C4F191E009AFBC6 /* Times Play */ = {
 			isa = PBXGroup;
 			children = (
-				8D53519E1C4F191E009AFBC6 /* AppDelegate.swift */,
-				8D5351A01C4F191E009AFBC6 /* ViewController.swift */,
 				8D5351A21C4F191E009AFBC6 /* Main.storyboard */,
-				8D2043FA1C5B171B004D19FE /* MySegmentedControl.swift */,
-				8D8E5E2A1C532D2700998E68 /* AwardViewController.swift */,
-				8D5351A51C4F191E009AFBC6 /* Assets.xcassets */,
-				8D5351A71C4F191E009AFBC6 /* LaunchScreen.storyboard */,
-				8D5351AA1C4F191E009AFBC6 /* Info.plist */,
+				8D5351A01C4F191E009AFBC6 /* ViewController.swift */,
 				8D5351C41C4F2560009AFBC6 /* QuizViewController.swift */,
-				8D8E5E1C1C52F13500998E68 /* SetImage.swift */,
-				8D8E5E2C1C53357400998E68 /* SetAward.swift */,
+				8D8E5E2A1C532D2700998E68 /* AwardViewController.swift */,
+				8D2043FC1C5B1A1F004D19FE /* Classes */,
+				8D2043FD1C5B1A65004D19FE /* Support */,
 			);
 			path = "Times Play";
 			sourceTree = "<group>";
@@ -122,6 +142,8 @@
 				8D8E5E301C5345D400998E68 /* okButton.png */,
 				8D5351B11C4F193D009AFBC6 /* circle.png */,
 				8D5351B21C4F193D009AFBC6 /* play.png */,
+				8D2044001C5B254A004D19FE /* triangle.png */,
+				8D2043FE1C5B253D004D19FE /* hexagon.png */,
 				8DEC83791C51BAF000F0C72E /* polygon.png */,
 				8D5351B41C4F193D009AFBC6 /* star.png */,
 				8D8E5E2E1C53408D00998E68 /* ribbon.png */,
@@ -215,9 +237,11 @@
 				8D5351A61C4F191E009AFBC6 /* Assets.xcassets in Resources */,
 				8D5351B91C4F193D009AFBC6 /* star.png in Resources */,
 				8D5351A41C4F191E009AFBC6 /* Main.storyboard in Resources */,
+				8D2044011C5B254A004D19FE /* triangle.png in Resources */,
 				8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */,
 				8D8E5E261C532AC700998E68 /* bronze medal.png in Resources */,
 				8D8E5E271C532AC700998E68 /* gold medal.png in Resources */,
+				8D2043FF1C5B253D004D19FE /* hexagon.png in Resources */,
 				8D8E5E291C532AC700998E68 /* square.png in Resources */,
 				8D5351B71C4F193D009AFBC6 /* play.png in Resources */,
 				8D8E5E2F1C53408D00998E68 /* ribbon.png in Resources */,

@@ -29,7 +29,7 @@ class QuizViewController: UIViewController {
     
     var randomArray = [0, 0, 0, 0]
     
-    var imageArray = [1, 2, 3, 4]
+    var imageArray = [1, 2, 3, 4, 5, 6]
     
     let image = SetImage()
     
@@ -81,16 +81,12 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("VCtwo is \(passedRandomStatus)")
-        print(randomStatus)
-        
         if passedRandomStatus == 0 {
             numberOfRounds = 12
-            print("if \(randomStatus) = true: randomStatus give 12")
             
         } else if passedRandomStatus == 1{
             numberOfRounds = 15
-            print("if \(randomStatus) = false: randomStatus give 15")
+            
         } else {
             numberOfRounds = 20
         }

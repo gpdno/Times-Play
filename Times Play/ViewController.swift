@@ -8,11 +8,11 @@
 
 import UIKit
 import AVFoundation
-var randomStatus = Int()
+//var randomStatus = Int()
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    //var randomStatus = Int()
+    var randomStatus = Int()
     
     var playCheer: AVAudioPlayer = AVAudioPlayer()
     
@@ -28,13 +28,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         switch segmentControl.selectedSegmentIndex {
         case 0:
-            print("run in order")
             randomStatus = 0
         case 1:
-            print("random 15")
             randomStatus = 1
         default:
-            print("random 20")
             randomStatus = 2
         }
     }
@@ -151,8 +148,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         secondViewController.passedMultiplicationNumber = multiplicationFactor
         secondViewController.passedRandomStatus = randomStatus
-        print("passedRandomStatus = \(secondViewController.passedRandomStatus)")
-        print("randomStatus = \(randomStatus)")
     }
 
 }
