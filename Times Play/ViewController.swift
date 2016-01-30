@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 //var randomStatus = Int()
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIPopoverPresentationControllerDelegate {
     
     var randomStatus = Int()
     
@@ -35,8 +35,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             randomStatus = 2
         }
     }
+    @IBAction func inOrder(sender: AnyObject) {
+        self.performSegueWithIdentifier("inOrderPopover", sender: self)
+    }
+    
+    @IBAction func random15(sender: AnyObject) {
+        self.performSegueWithIdentifier("random15Popover", sender: self)
+        
+    }
+    
+    @IBAction func random20(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("random20Popover", sender: self)
+        
+    }
+    
     @IBAction func playButtonPressed(sender: AnyObject) {
-
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +67,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         } catch let err as NSError {
             print(err.debugDescription)
         }
-
+        
         playCheer.prepareToPlay()
         playAww.prepareToPlay()
     }
@@ -127,7 +142,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
         }
     }
-
+    
     func playSound(sound: String) {
         if playCheer == true {
             playCheer.stop()
@@ -144,11 +159,54 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let secondViewController: QuizViewController = segue.destinationViewController as! QuizViewController
-        
-        secondViewController.passedMultiplicationNumber = multiplicationFactor
-        secondViewController.passedRandomStatus = randomStatus
+        if segue.identifier == "inOrderPopover" {
+            
+            let vc = segue.destinationViewController
+            
+            let controller = vc.popoverPresentationController
+            
+            if controller != nil {
+                
+                controller?.delegate = self
+                
+            }
+            
+        } else if segue.identifier == "random15Popover" {
+            
+            let vc = segue.destinationViewController
+            
+            let controller = vc.popoverPresentationController
+            
+            if controller != nil {
+                
+                controller?.delegate = self
+                
+            }
+            
+        }  else if segue.identifier == "random20Popover" {
+            
+            let vc = segue.destinationViewController
+            
+            let controller = vc.popoverPresentationController
+            
+            if controller != nil {
+                
+                controller?.delegate = self
+                
+            } else {
+                
+                let secondViewController: QuizViewController = segue.destinationViewController as! QuizViewController
+                
+                secondViewController.passedMultiplicationNumber = multiplicationFactor
+                secondViewController.passedRandomStatus = randomStatus
+                
+            }
+            
+        }
     }
-
+    
+        func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+            
+            return .None
+        }
 }
-

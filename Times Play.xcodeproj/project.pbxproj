@@ -34,6 +34,7 @@
 		8D8E5E2D1C53357400998E68 /* SetAward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E5E2C1C53357400998E68 /* SetAward.swift */; };
 		8D8E5E2F1C53408D00998E68 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E2E1C53408D00998E68 /* ribbon.png */; };
 		8D8E5E311C5345D400998E68 /* okButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E301C5345D400998E68 /* okButton.png */; };
+		8D9877EF1C5D736C00E26DF2 /* Detail Disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9877EE1C5D736C00E26DF2 /* Detail Disclosure.png */; };
 		8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC83791C51BAF000F0C72E /* polygon.png */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		8D8E5E2C1C53357400998E68 /* SetAward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAward.swift; sourceTree = "<group>"; };
 		8D8E5E2E1C53408D00998E68 /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
 		8D8E5E301C5345D400998E68 /* okButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okButton.png; sourceTree = "<group>"; };
+		8D9877EE1C5D736C00E26DF2 /* Detail Disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Detail Disclosure.png"; sourceTree = "<group>"; };
 		8DEC83791C51BAF000F0C72E /* polygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polygon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 				8D8E5E301C5345D400998E68 /* okButton.png */,
 				8D5351B11C4F193D009AFBC6 /* circle.png */,
 				8D5351B21C4F193D009AFBC6 /* play.png */,
+				8D9877EE1C5D736C00E26DF2 /* Detail Disclosure.png */,
 				8D2044001C5B254A004D19FE /* triangle.png */,
 				8D2043FE1C5B253D004D19FE /* hexagon.png */,
 				8DEC83791C51BAF000F0C72E /* polygon.png */,
@@ -228,6 +231,7 @@
 				8D61A2111C58E4FE003667F7 /* SCDE Logo_Icon.png in Resources */,
 				8D5351A91C4F191E009AFBC6 /* LaunchScreen.storyboard in Resources */,
 				8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */,
+				8D9877EF1C5D736C00E26DF2 /* Detail Disclosure.png in Resources */,
 				8D8E5E281C532AC700998E68 /* silver medal.png in Resources */,
 				8D253C2C1C53520F00911B87 /* roundsquare.png in Resources */,
 				8D5351BC1C4F1945009AFBC6 /* Times-Play.png in Resources */,

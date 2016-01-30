@@ -23,19 +23,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="r7f-IR-bGl">
-                                <rect key="frame" x="16" y="75" width="343" height="517"/>
+                                <rect key="frame" x="16" y="63" width="343" height="541"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-wF-D1J">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="234"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="233"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Times-Play.png" translatesAutoresizingMaskIntoConstraints="NO" id="eiR-M9-whI">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="79"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="78"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="eiR-M9-whI" secondAttribute="height" multiplier="35:8" id="Kk8-IR-AsT"/>
                                                 </constraints>
                                             </imageView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-JB-ou3" customClass="PickerView" customModule="Times_Play" customModuleProvider="target">
-                                                <rect key="frame" x="97" y="109" width="150" height="125"/>
+                                                <rect key="frame" x="97" y="108" width="150" height="125"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="jhh-X3-W16">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="300"/>
@@ -47,31 +47,74 @@
                                             </pickerView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-Tw-5Fc">
-                                        <rect key="frame" x="39" y="284" width="266" height="58"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6fq-MM-gaE">
+                                        <rect key="frame" x="52" y="283" width="240" height="83"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplication Factors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-GZ-hpK">
-                                                <rect key="frame" x="0.0" y="0.0" width="266" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="25"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ny8-uM-kMp" customClass="MySegmentedControl" customModule="Times_Play" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="30" width="266" height="29"/>
-                                                <segments>
-                                                    <segment title="In Order"/>
-                                                    <segment title="Random -15"/>
-                                                    <segment title="Random-20"/>
-                                                </segments>
-                                                <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="factorSegmentSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZdY-fw-V1F"/>
-                                                </connections>
-                                            </segmentedControl>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-Tw-5Fc">
+                                                <rect key="frame" x="0.0" y="33" width="240" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnx-GB-DiW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="22"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="bottomRight" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfu-4B-T5B">
+                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="22"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="80" id="B7c-Hk-0o3"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="YwS-HI-n9f"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Detail Disclosure.png"/>
+                                                                <connections>
+                                                                    <action selector="inOrder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVz-ng-Nru"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpG-DZ-XbM">
+                                                                <rect key="frame" x="80" y="0.0" width="80" height="22"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="80" id="F4X-v7-RVf"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="zGc-Nw-fB8"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Detail Disclosure.png"/>
+                                                                <connections>
+                                                                    <action selector="random15:" destination="BYZ-38-t0r" eventType="touchUpInside" id="St7-OU-z0w"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR9-XM-JsZ">
+                                                                <rect key="frame" x="160" y="0.0" width="80" height="22"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="80" id="Ddh-5T-fmh"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="FA0-cN-cZ5"/>
+                                                                </constraints>
+                                                                <state key="normal" image="Detail Disclosure.png"/>
+                                                                <connections>
+                                                                    <action selector="random20:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CWS-U7-2fa"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ny8-uM-kMp" customClass="MySegmentedControl" customModule="Times_Play" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22" width="240" height="29"/>
+                                                        <segments>
+                                                            <segment title="In Order"/>
+                                                            <segment title="Random -15"/>
+                                                            <segment title="Random-20"/>
+                                                        </segments>
+                                                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="factorSegmentSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZdY-fw-V1F"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-Bh-NoA">
-                                        <rect key="frame" x="109" y="392" width="125" height="125"/>
+                                        <rect key="frame" x="109" y="416" width="125" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="125" id="qJH-c4-xdj">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="250"/>
@@ -110,11 +153,55 @@
                     <connections>
                         <outlet property="pickerView" destination="Dkt-JB-ou3" id="E3m-FG-XzA"/>
                         <outlet property="segmentControl" destination="ny8-uM-kMp" id="lpa-BF-bnK"/>
+                        <segue destination="lcQ-EM-5Ia" kind="popoverPresentation" identifier="inOrderPopover" popoverAnchorView="Bfu-4B-T5B" id="TE3-Sj-Y6Q">
+                            <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                        </segue>
+                        <segue destination="9K7-zU-20n" kind="popoverPresentation" identifier="random15Popover" popoverAnchorView="GpG-DZ-XbM" id="xN8-hx-x40">
+                            <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                        </segue>
+                        <segue destination="VOB-Gt-ghE" kind="popoverPresentation" identifier="random20Popover" popoverAnchorView="gR9-XM-JsZ" id="0F9-db-izx">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-91.5" y="326.5"/>
+        </scene>
+        <!--InOrderInfo-->
+        <scene sceneID="CMQ-kF-Fhe">
+            <objects>
+                <viewController title="InOrderInfo" id="lcQ-EM-5Ia" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ebn-xw-7US"/>
+                        <viewControllerLayoutGuide type="bottom" id="AQh-c8-kLA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ma5-Pa-zJo">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Displays the multiplication factors in order, 1 thu 12.  (e.i.1x1, 1x2, 1x3... etc.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qr-SM-oir">
+                                <rect key="frame" x="0.0" y="20" width="100" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Qr-SM-oir" firstAttribute="top" secondItem="ebn-xw-7US" secondAttribute="bottom" id="Rjo-2Z-CJP"/>
+                            <constraint firstItem="AQh-c8-kLA" firstAttribute="top" secondItem="5Qr-SM-oir" secondAttribute="bottom" id="b51-JN-yp5"/>
+                            <constraint firstItem="5Qr-SM-oir" firstAttribute="leading" secondItem="ma5-Pa-zJo" secondAttribute="leading" id="eX3-CV-PXI"/>
+                            <constraint firstAttribute="trailing" secondItem="5Qr-SM-oir" secondAttribute="trailing" id="sqZ-ZJ-T3C"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="100" height="75"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="100" height="100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujv-OK-fPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="796"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="wCu-RN-eW8">
@@ -427,8 +514,79 @@
             </objects>
             <point key="canvasLocation" x="367.5" y="1097.5"/>
         </scene>
+        <!--random15info-->
+        <scene sceneID="GLB-JW-cze">
+            <objects>
+                <viewController title="random15info" id="9K7-zU-20n" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K1e-VU-WXn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nnn-jS-mNA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Tr-Lj-2Q3">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Displays the selected multiplication factors in random order, 1 thu 15." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irq-dq-tHg">
+                                <rect key="frame" x="0.0" y="20" width="100" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="irq-dq-tHg" firstAttribute="top" secondItem="K1e-VU-WXn" secondAttribute="bottom" id="KXj-Rm-dOd"/>
+                            <constraint firstItem="Nnn-jS-mNA" firstAttribute="top" secondItem="irq-dq-tHg" secondAttribute="bottom" id="SGL-pd-C17"/>
+                            <constraint firstAttribute="trailing" secondItem="irq-dq-tHg" secondAttribute="trailing" id="aym-uZ-Je2"/>
+                            <constraint firstItem="irq-dq-tHg" firstAttribute="leading" secondItem="6Tr-Lj-2Q3" secondAttribute="leading" id="f0s-ra-4sk"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="100" height="75"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="100" height="100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKe-yG-6MF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="887"/>
+        </scene>
+        <!--random20info-->
+        <scene sceneID="4l0-Z2-woX">
+            <objects>
+                <viewController title="random20info" id="VOB-Gt-ghE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IZB-oo-lV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="DCK-Zd-E2O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pTW-ED-t3J">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Displays the selected multiplication factors in random order, 1 thu 20." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47v-a8-Kaa">
+                                <rect key="frame" x="0.0" y="20" width="100" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="47v-a8-Kaa" firstAttribute="top" secondItem="IZB-oo-lV1" secondAttribute="bottom" id="VkL-aV-i7p"/>
+                            <constraint firstItem="47v-a8-Kaa" firstAttribute="leading" secondItem="pTW-ED-t3J" secondAttribute="leading" id="cA5-Ut-Fi8"/>
+                            <constraint firstAttribute="trailing" secondItem="47v-a8-Kaa" secondAttribute="trailing" id="dUE-qx-bmL"/>
+                            <constraint firstItem="DCK-Zd-E2O" firstAttribute="top" secondItem="47v-a8-Kaa" secondAttribute="bottom" id="vXP-PX-3Qo"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="100" height="75"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="100" height="100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5yF-3L-Jy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="946"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Detail Disclosure.png" width="22" height="22"/>
         <image name="Times-Play.png" width="522" height="104"/>
         <image name="chalkboard.jpg" width="801" height="750"/>
         <image name="circle.png" width="100" height="100"/>
