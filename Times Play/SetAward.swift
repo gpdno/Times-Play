@@ -17,9 +17,9 @@ class SetAward {
         switch someValue {
         case 100:
             assetName = "gold medal"
-        case 85...99:
+        case 80...99:
             assetName = "silver medal"
-        case 70...84:
+        case 60...79:
             assetName = "bronze medal"
         default:
             assetName = "ribbon"
