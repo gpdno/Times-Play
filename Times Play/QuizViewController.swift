@@ -11,6 +11,10 @@ import AVFoundation
 
 class QuizViewController: UIViewController {
     
+    var startTime = NSTimeInterval()
+    
+    var timer:NSTimer = NSTimer()
+    
     var playCheer: AVAudioPlayer = AVAudioPlayer()
     
     var playAww: AVAudioPlayer = AVAudioPlayer()
@@ -32,6 +36,8 @@ class QuizViewController: UIViewController {
     var imageArray = [1, 2, 3, 4, 5, 6]
     
     let image = SetImage()
+    
+    @IBOutlet var displayTimeLabel: UILabel!
     
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
@@ -116,6 +122,8 @@ class QuizViewController: UIViewController {
         
         currentScore.text = "Score:  0"
         
+        startTimer()
+        
         playGame()
     }
     
@@ -138,6 +146,8 @@ class QuizViewController: UIViewController {
             
         } else {
             
+            stopTimer()
+            
             endGame()
             
         }
@@ -148,7 +158,7 @@ class QuizViewController: UIViewController {
         
         let title = "Game Over"
         
-        let message = "Final Score:  \(numberCorrect) out of \(numberOfRounds)"
+        let message = "Final Score:  \(numberCorrect) out of \(numberOfRounds) in a time of \(displayTimeLabel.text!)"
         
         currentScore.text = message
         
@@ -241,6 +251,45 @@ class QuizViewController: UIViewController {
             playAww.play()
         }
         
+    }
+    
+    func updateTime() {
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        //Find the difference between current time and start time.
+        var elapsedTime: NSTimeInterval = currentTime - startTime
+        
+        //calculate the minutes in elapsed time.
+        let minutes = UInt8(elapsedTime / 60.0)
+        elapsedTime -= (NSTimeInterval(minutes) * 60)
+        
+        //calculate the seconds in elapsed time.
+        let seconds = UInt8(elapsedTime)
+        elapsedTime -= NSTimeInterval(seconds)
+        
+        //find out the fraction of milliseconds to be displayed.
+        let fraction = UInt8(elapsedTime * 100)
+        
+        //add the leading zero for minutes, seconds and millseconds and store them as string constants
+        
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        let strFraction = String(format: "%02d", fraction)
+        
+        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
+        displayTimeLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+    }
+    
+    func startTimer() {
+        if (!timer.valid) {
+            let aSelector : Selector = "updateTime"
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = NSDate.timeIntervalSinceReferenceDate()
+        }
+    }
+    
+    func stopTimer() {
+        timer.invalidate()
     }
     
     func showAlert(title: String, message: String) {

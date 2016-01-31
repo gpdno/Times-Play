@@ -403,6 +403,16 @@
                                     <action selector="pressButtonFour:" destination="1cK-md-boJ" eventType="touchUpInside" id="LDb-QR-2OX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giC-3k-XqR">
+                                <rect key="frame" x="16" y="20" width="55" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Y4Z-RT-pV8"/>
+                                    <constraint firstAttribute="width" constant="55" id="l76-bB-HNP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -411,6 +421,7 @@
                             <constraint firstItem="kph-lf-plM" firstAttribute="leading" secondItem="2hz-K3-Dnj" secondAttribute="leadingMargin" constant="5" id="7kA-eh-jGG"/>
                             <constraint firstItem="kph-lf-plM" firstAttribute="centerY" secondItem="2hz-K3-Dnj" secondAttribute="centerY" id="CBU-o6-0y8"/>
                             <constraint firstItem="d2A-34-6g5" firstAttribute="centerX" secondItem="hYM-nh-vhR" secondAttribute="centerX" id="DeO-bJ-mpA"/>
+                            <constraint firstItem="giC-3k-XqR" firstAttribute="top" secondItem="k77-cs-P9c" secondAttribute="bottom" id="FcF-mn-0W4"/>
                             <constraint firstItem="hVC-e6-YpY" firstAttribute="centerX" secondItem="GZF-rR-8mn" secondAttribute="centerX" id="GGH-oU-n4z"/>
                             <constraint firstItem="mmH-nd-Lrc" firstAttribute="leading" secondItem="2hz-K3-Dnj" secondAttribute="leading" id="L1u-i9-TNf"/>
                             <constraint firstItem="d2A-34-6g5" firstAttribute="centerY" secondItem="hYM-nh-vhR" secondAttribute="centerY" id="LVR-l6-6T8"/>
@@ -419,6 +430,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kph-lf-plM" secondAttribute="trailing" constant="5" id="a9Q-NK-osr"/>
                             <constraint firstItem="mmH-nd-Lrc" firstAttribute="top" secondItem="2hz-K3-Dnj" secondAttribute="top" id="cEE-Wr-rmQ"/>
                             <constraint firstItem="38o-DZ-VY1" firstAttribute="centerX" secondItem="5tZ-Zk-lC7" secondAttribute="centerX" id="gbi-Ec-CW0"/>
+                            <constraint firstItem="giC-3k-XqR" firstAttribute="leading" secondItem="2hz-K3-Dnj" secondAttribute="leadingMargin" id="p0X-sB-HKv"/>
                             <constraint firstItem="QY1-jc-fUt" firstAttribute="centerX" secondItem="BZi-UY-QSP" secondAttribute="centerX" id="s3l-w2-C0I"/>
                             <constraint firstItem="5ei-d9-0u4" firstAttribute="top" secondItem="mmH-nd-Lrc" secondAttribute="bottom" id="wvw-Vr-p57"/>
                             <constraint firstAttribute="trailing" secondItem="mmH-nd-Lrc" secondAttribute="trailing" id="zrz-OT-PNr"/>
@@ -432,6 +444,7 @@
                         <outlet property="buttonThree" destination="d2A-34-6g5" id="gDv-Qy-DiA"/>
                         <outlet property="buttonTwo" destination="QY1-jc-fUt" id="ccd-Ye-yd8"/>
                         <outlet property="currentScore" destination="lVm-Iq-6ue" id="U5x-zg-9DN"/>
+                        <outlet property="displayTimeLabel" destination="giC-3k-XqR" id="K1s-Fk-4Er"/>
                         <outlet property="imageFour" destination="5tZ-Zk-lC7" id="CS9-w1-WPY"/>
                         <outlet property="imageOne" destination="GZF-rR-8mn" id="uHO-Nr-Ze9"/>
                         <outlet property="imageThree" destination="hYM-nh-vhR" id="gHA-ck-6K7"/>
