@@ -184,7 +184,9 @@ class QuizViewController: UIViewController {
     
     func guessOrderValues() {
         
-        randomArray[0] = currentRound * Int(passedMultiplicationNumber)!
+        randomResult = currentRound
+        
+        randomArray[0] = randomResult * Int(passedMultiplicationNumber)!
         
         for i in 1...3 {
             
@@ -192,7 +194,7 @@ class QuizViewController: UIViewController {
             
         }
         
-        questionText.text = "\(passedMultiplicationNumber) X \(currentRound)"
+        questionText.text = "\(passedMultiplicationNumber) X \(randomResult)"
         
     }
     
