@@ -267,17 +267,17 @@ class QuizViewController: UIViewController {
         let seconds = UInt8(elapsedTime)
         elapsedTime -= NSTimeInterval(seconds)
         
-        //find out the fraction of milliseconds to be displayed.
-        let fraction = UInt8(elapsedTime * 100)
+        //find out the tenths of seconds to be displayed.
+        let fraction = UInt8(elapsedTime * 10)
         
-        //add the leading zero for minutes, seconds and millseconds and store them as string constants
+        //add the leading zero for minutes, seconds and tenths and store them as string constants
         
-        let strMinutes = String(format: "%02d", minutes)
+        let strMinutes = String(format: "%01d", minutes)
         let strSeconds = String(format: "%02d", seconds)
-        let strFraction = String(format: "%02d", fraction)
+        let strFraction = String(format: "%01d", fraction)
         
         //concatenate minuets, seconds and milliseconds as assign it to the UILabel
-        displayTimeLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+        displayTimeLabel.text = "\(strMinutes):\(strSeconds).\(strFraction)"
     }
     
     func startTimer() {
