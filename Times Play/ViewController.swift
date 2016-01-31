@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-//var randomStatus = Int()
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIPopoverPresentationControllerDelegate {
     
@@ -41,13 +40,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func random15(sender: AnyObject) {
         self.performSegueWithIdentifier("random15Popover", sender: self)
-        
     }
     
     @IBAction func random20(sender: AnyObject) {
         
         self.performSegueWithIdentifier("random20Popover", sender: self)
-        
     }
     
     @IBAction func playButtonPressed(sender: AnyObject) {
@@ -159,54 +156,53 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "inOrderPopover" {
+        if segue.identifier == "passToQuiz" {
             
-            let vc = segue.destinationViewController
+            let secondViewController: QuizViewController = segue.destinationViewController as! QuizViewController
             
-            let controller = vc.popoverPresentationController
+            secondViewController.passedMultiplicationNumber = multiplicationFactor
+            secondViewController.passedRandomStatus = randomStatus
             
-            if controller != nil {
+        } else {
+            
+            if segue.identifier == "inOrderPopover" {
                 
-                controller?.delegate = self
+                let vc = segue.destinationViewController
                 
+                let controller = vc.popoverPresentationController
+                
+                if controller != nil {
+                    
+                    controller?.delegate = self
+                    
+                }
+            } else if segue.identifier == "random15Popover" {
+                
+                let vc = segue.destinationViewController
+                
+                let controller = vc.popoverPresentationController
+                
+                if controller != nil {
+                    
+                    controller?.delegate = self
+                }
+                
+            } else if segue.identifier == "random20Popover" {
+                
+                let vc = segue.destinationViewController
+                
+                let controller = vc.popoverPresentationController
+                
+                if controller != nil {
+                    
+                    controller?.delegate = self
+                }
             }
-            
-        } else if segue.identifier == "random15Popover" {
-            
-            let vc = segue.destinationViewController
-            
-            let controller = vc.popoverPresentationController
-            
-            if controller != nil {
-                
-                controller?.delegate = self
-                
-            }
-            
-        }  else if segue.identifier == "random20Popover" {
-            
-            let vc = segue.destinationViewController
-            
-            let controller = vc.popoverPresentationController
-            
-            if controller != nil {
-                
-                controller?.delegate = self
-                
-            } else {
-                
-                let secondViewController: QuizViewController = segue.destinationViewController as! QuizViewController
-                
-                secondViewController.passedMultiplicationNumber = multiplicationFactor
-                secondViewController.passedRandomStatus = randomStatus
-                
-            }
-            
         }
     }
     
-        func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-            
-            return .None
-        }
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        
+        return .None
+    }
 }
