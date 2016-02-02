@@ -9,6 +9,8 @@
 import UIKit
 
 class HighscoreTableViewController: UITableViewController {
+    
+    var leaderboard = [Highscore]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
