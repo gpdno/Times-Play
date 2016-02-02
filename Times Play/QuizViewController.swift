@@ -97,24 +97,14 @@ class QuizViewController: UIViewController {
             numberOfRounds = 20
         }
         
-        let audioPathCheer = NSBundle.mainBundle().pathForResource("Cheer", ofType: "m4a")!
         
         do {
             
-            try playCheer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPathCheer))
+            try playCheer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Cheer", ofType: "m4a")!))
+            try playAww = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Aww", ofType: "m4a")!))
             
-        } catch {
-            // process error
-        }
-        
-        let audioPathAww = NSBundle.mainBundle().pathForResource("Aww", ofType: "m4a")!
-        
-        do {
-            
-            try playAww = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPathAww))
-            
-        } catch {
-            // process error
+        } catch let err as NSError {
+            print(err.debugDescription)
         }
         
         playCheer.prepareToPlay()
