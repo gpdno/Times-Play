@@ -13,10 +13,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var randomStatus = Int()
     
-    var playCheer: AVAudioPlayer = AVAudioPlayer()
-    
-    var playAww: AVAudioPlayer = AVAudioPlayer()
-    
     var multiplicationFactor = "1"
     
     @IBOutlet var pickerView: UIPickerView!
@@ -56,17 +52,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         
-        do {
-            
-            try playCheer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Cheer", ofType: "m4a")!))
-            try playAww = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Aww", ofType: "m4a")!))
-            
-        } catch let err as NSError {
-            print(err.debugDescription)
-        }
-        
-        playCheer.prepareToPlay()
-        playAww.prepareToPlay()
     }
     
     let pickerData = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"]
@@ -137,20 +122,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         default:
             multiplicationFactor = "12"
             
-        }
-    }
-    
-    func playSound(sound: String) {
-        if playCheer == true {
-            playCheer.stop()
-        }
-        if playAww == true {
-            playAww.stop()
-        }
-        if sound == "Cheer" {
-            playCheer.play()
-        } else {
-            playAww.play()
         }
     }
     

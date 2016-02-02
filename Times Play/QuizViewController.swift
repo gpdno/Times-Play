@@ -151,7 +151,6 @@ class QuizViewController: UIViewController {
             endGame()
             
         }
-        
     }
     
     func endGame() {
@@ -221,7 +220,6 @@ class QuizViewController: UIViewController {
             showAlert(title, message: correctAnswer)
             
         }
-        
     }
     
     func setButtons() {
@@ -252,7 +250,6 @@ class QuizViewController: UIViewController {
         } else {
             playAww.play()
         }
-        
     }
     
     func updateTime() {
@@ -323,7 +320,6 @@ class QuizViewController: UIViewController {
         thirdViewController.passedNumberOfRounds = numberOfRounds
         thirdViewController.passedNumberCorrect = numberCorrect
     }
-    
 }
 
 

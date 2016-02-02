@@ -35,6 +35,8 @@
 		8D8E5E2D1C53357400998E68 /* SetAward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E5E2C1C53357400998E68 /* SetAward.swift */; };
 		8D8E5E2F1C53408D00998E68 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E2E1C53408D00998E68 /* ribbon.png */; };
 		8D8E5E311C5345D400998E68 /* okButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E301C5345D400998E68 /* okButton.png */; };
+		8D9348BD1C5F808F00DE646B /* HighscoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9348BC1C5F808F00DE646B /* HighscoreTableViewController.swift */; };
+		8D9348BF1C602F0600DE646B /* Highscore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9348BE1C602F0600DE646B /* Highscore.swift */; };
 		8DEC837A1C51BAF000F0C72E /* polygon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC83791C51BAF000F0C72E /* polygon.png */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		8D8E5E2C1C53357400998E68 /* SetAward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAward.swift; sourceTree = "<group>"; };
 		8D8E5E2E1C53408D00998E68 /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
 		8D8E5E301C5345D400998E68 /* okButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okButton.png; sourceTree = "<group>"; };
+		8D9348BC1C5F808F00DE646B /* HighscoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewController.swift; sourceTree = "<group>"; };
+		8D9348BE1C602F0600DE646B /* Highscore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highscore.swift; sourceTree = "<group>"; };
 		8DEC83791C51BAF000F0C72E /* polygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polygon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 		8D2043FC1C5B1A1F004D19FE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8D9348BE1C602F0600DE646B /* Highscore.swift */,
 				8D2043FA1C5B171B004D19FE /* MySegmentedControl.swift */,
 				8D8E5E1C1C52F13500998E68 /* SetImage.swift */,
 				8D8E5E2C1C53357400998E68 /* SetAward.swift */,
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5351A21C4F191E009AFBC6 /* Main.storyboard */,
+				8D9348BC1C5F808F00DE646B /* HighscoreTableViewController.swift */,
 				8D5351A01C4F191E009AFBC6 /* ViewController.swift */,
 				8D5351C41C4F2560009AFBC6 /* QuizViewController.swift */,
 				8D8E5E2A1C532D2700998E68 /* AwardViewController.swift */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9348BD1C5F808F00DE646B /* HighscoreTableViewController.swift in Sources */,
 				8D8E5E2D1C53357400998E68 /* SetAward.swift in Sources */,
+				8D9348BF1C602F0600DE646B /* Highscore.swift in Sources */,
 				8D8E5E1D1C52F13500998E68 /* SetImage.swift in Sources */,
 				8D5351C51C4F2560009AFBC6 /* QuizViewController.swift in Sources */,
 				8D8E5E2B1C532D2700998E68 /* AwardViewController.swift in Sources */,
