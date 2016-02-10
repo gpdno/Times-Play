@@ -26,6 +26,10 @@
 		8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */; };
 		8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */; };
 		8D61A2111C58E4FE003667F7 /* SCDE Logo_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D61A2101C58E4FE003667F7 /* SCDE Logo_Icon.png */; };
+		8D716DFE1C6AD2F3004C721E /* HighscoresData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D716DFC1C6AD2F3004C721E /* HighscoresData.xcdatamodeld */; };
+		8D716E011C6AD3F8004C721E /* Highscores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D716DFF1C6AD3F8004C721E /* Highscores+CoreDataProperties.swift */; };
+		8D716E021C6AD3F8004C721E /* Highscores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D716E001C6AD3F8004C721E /* Highscores.swift */; };
+		8D716E041C6AD519004C721E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D716E031C6AD519004C721E /* DataController.swift */; };
 		8D8E5E1D1C52F13500998E68 /* SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E5E1C1C52F13500998E68 /* SetImage.swift */; };
 		8D8E5E261C532AC700998E68 /* bronze medal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E221C532AC700998E68 /* bronze medal.png */; };
 		8D8E5E271C532AC700998E68 /* gold medal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E231C532AC700998E68 /* gold medal.png */; };
@@ -62,6 +66,10 @@
 		8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheer.m4a; sourceTree = "<group>"; };
 		8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aww.m4a; sourceTree = "<group>"; };
 		8D61A2101C58E4FE003667F7 /* SCDE Logo_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SCDE Logo_Icon.png"; sourceTree = "<group>"; };
+		8D716DFD1C6AD2F3004C721E /* HighscoresData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HighscoresData.xcdatamodel; sourceTree = "<group>"; };
+		8D716DFF1C6AD3F8004C721E /* Highscores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Highscores+CoreDataProperties.swift"; path = "Times Play/Highscores+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8D716E001C6AD3F8004C721E /* Highscores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Highscores.swift; path = "Times Play/Highscores.swift"; sourceTree = "<group>"; };
+		8D716E031C6AD519004C721E /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8D8E5E1C1C52F13500998E68 /* SetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetImage.swift; sourceTree = "<group>"; };
 		8D8E5E221C532AC700998E68 /* bronze medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bronze medal.png"; sourceTree = "<group>"; };
 		8D8E5E231C532AC700998E68 /* gold medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gold medal.png"; sourceTree = "<group>"; };
@@ -112,6 +120,8 @@
 		8D5351921C4F191E009AFBC6 = {
 			isa = PBXGroup;
 			children = (
+				8D716DFF1C6AD3F8004C721E /* Highscores+CoreDataProperties.swift */,
+				8D716E001C6AD3F8004C721E /* Highscores.swift */,
 				8D53519D1C4F191E009AFBC6 /* Times Play */,
 				8D53519C1C4F191E009AFBC6 /* Products */,
 				8D5351C01C4F1957009AFBC6 /* Images */,
@@ -137,6 +147,8 @@
 				8D8E5E2A1C532D2700998E68 /* AwardViewController.swift */,
 				8D2043FC1C5B1A1F004D19FE /* Classes */,
 				8D2043FD1C5B1A65004D19FE /* Support */,
+				8D716DFC1C6AD2F3004C721E /* HighscoresData.xcdatamodeld */,
+				8D716E031C6AD519004C721E /* DataController.swift */,
 			);
 			path = "Times Play";
 			sourceTree = "<group>";
@@ -265,14 +277,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D716E011C6AD3F8004C721E /* Highscores+CoreDataProperties.swift in Sources */,
 				8D9348BD1C5F808F00DE646B /* HighscoreTableViewController.swift in Sources */,
 				8D8E5E2D1C53357400998E68 /* SetAward.swift in Sources */,
 				8D9348BF1C602F0600DE646B /* Highscore.swift in Sources */,
 				8D8E5E1D1C52F13500998E68 /* SetImage.swift in Sources */,
 				8D5351C51C4F2560009AFBC6 /* QuizViewController.swift in Sources */,
+				8D716E021C6AD3F8004C721E /* Highscores.swift in Sources */,
 				8D8E5E2B1C532D2700998E68 /* AwardViewController.swift in Sources */,
 				8D5351A11C4F191E009AFBC6 /* ViewController.swift in Sources */,
 				8D2043FB1C5B171B004D19FE /* MySegmentedControl.swift in Sources */,
+				8D716DFE1C6AD2F3004C721E /* HighscoresData.xcdatamodeld in Sources */,
+				8D716E041C6AD519004C721E /* DataController.swift in Sources */,
 				8D53519F1C4F191E009AFBC6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +449,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8D716DFC1C6AD2F3004C721E /* HighscoresData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D716DFD1C6AD2F3004C721E /* HighscoresData.xcdatamodel */,
+			);
+			currentVersion = 8D716DFD1C6AD2F3004C721E /* HighscoresData.xcdatamodel */;
+			path = HighscoresData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8D5351931C4F191E009AFBC6 /* Project object */;
 }

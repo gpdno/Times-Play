@@ -11,12 +11,16 @@ import Foundation
 class Highscore: NSObject, NSCoding {
     
     var playername: String!
-    var playerscore: Int!
+    var playerscore: String!
     
-    init(name: String, score: Int) {
-        playername = name
-        playerscore = score
+    init(name: String, score: String) {
+        self.playername = name
+        self.playerscore = score
     
+    }
+    
+    func displayScore() -> String {
+        return "\(playername)  :  \(playerscore)"
     }
     
     override init() {
@@ -26,7 +30,7 @@ class Highscore: NSObject, NSCoding {
     required convenience init?(coder aDecoder: NSCoder) {
         self.init()
         self.playername = aDecoder.decodeObjectForKey("playername") as? String
-        self.playerscore = aDecoder.decodeObjectForKey("playerscore") as? Int
+        self.playerscore = aDecoder.decodeObjectForKey("playerscore") as? String
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
