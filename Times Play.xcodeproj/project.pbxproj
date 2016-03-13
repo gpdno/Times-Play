@@ -25,6 +25,10 @@
 		8D5351C51C4F2560009AFBC6 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5351C41C4F2560009AFBC6 /* QuizViewController.swift */; };
 		8D5351C91C4F3DC6009AFBC6 /* Cheer.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */; };
 		8D5351CB1C4F3DD4009AFBC6 /* Aww.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */; };
+		8D5BDE9A1C7D46600014DA9A /* HighScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDE991C7D46600014DA9A /* HighScores.swift */; };
+		8D5BDE9D1C7D49550014DA9A /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDE9C1C7D49550014DA9A /* DataServices.swift */; };
+		8D5BDE9F1C7D506F0014DA9A /* HighScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDE9E1C7D506F0014DA9A /* HighScoreVC.swift */; };
+		8D5BDEA11C7D53A60014DA9A /* HighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDEA01C7D53A60014DA9A /* HighScoreCell.swift */; };
 		8D61A2111C58E4FE003667F7 /* SCDE Logo_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D61A2101C58E4FE003667F7 /* SCDE Logo_Icon.png */; };
 		8D8E5E1D1C52F13500998E68 /* SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8E5E1C1C52F13500998E68 /* SetImage.swift */; };
 		8D8E5E261C532AC700998E68 /* bronze medal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E5E221C532AC700998E68 /* bronze medal.png */; };
@@ -59,6 +63,10 @@
 		8D5351C41C4F2560009AFBC6 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheer.m4a; sourceTree = "<group>"; };
 		8D5351CA1C4F3DD4009AFBC6 /* Aww.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aww.m4a; sourceTree = "<group>"; };
+		8D5BDE991C7D46600014DA9A /* HighScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScores.swift; sourceTree = "<group>"; };
+		8D5BDE9C1C7D49550014DA9A /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		8D5BDE9E1C7D506F0014DA9A /* HighScoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreVC.swift; sourceTree = "<group>"; };
+		8D5BDEA01C7D53A60014DA9A /* HighScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreCell.swift; sourceTree = "<group>"; };
 		8D61A2101C58E4FE003667F7 /* SCDE Logo_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SCDE Logo_Icon.png"; sourceTree = "<group>"; };
 		8D8E5E1C1C52F13500998E68 /* SetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetImage.swift; sourceTree = "<group>"; };
 		8D8E5E221C532AC700998E68 /* bronze medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bronze medal.png"; sourceTree = "<group>"; };
@@ -89,6 +97,8 @@
 				8D2043FA1C5B171B004D19FE /* MySegmentedControl.swift */,
 				8D8E5E1C1C52F13500998E68 /* SetImage.swift */,
 				8D8E5E2C1C53357400998E68 /* SetAward.swift */,
+				8D5BDE991C7D46600014DA9A /* HighScores.swift */,
+				8D5BDEA01C7D53A60014DA9A /* HighScoreCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -125,10 +135,12 @@
 		8D53519D1C4F191E009AFBC6 /* Times Play */ = {
 			isa = PBXGroup;
 			children = (
+				8D5BDE9B1C7D493E0014DA9A /* Services */,
 				8D5351A21C4F191E009AFBC6 /* Main.storyboard */,
 				8D5351A01C4F191E009AFBC6 /* ViewController.swift */,
 				8D5351C41C4F2560009AFBC6 /* QuizViewController.swift */,
 				8D8E5E2A1C532D2700998E68 /* AwardViewController.swift */,
+				8D5BDE9E1C7D506F0014DA9A /* HighScoreVC.swift */,
 				8D2043FC1C5B1A1F004D19FE /* Classes */,
 				8D2043FD1C5B1A65004D19FE /* Support */,
 			);
@@ -166,6 +178,14 @@
 				8D5351C81C4F3DC6009AFBC6 /* Cheer.m4a */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		8D5BDE9B1C7D493E0014DA9A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D5BDE9C1C7D49550014DA9A /* DataServices.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +281,13 @@
 			files = (
 				8D8E5E2D1C53357400998E68 /* SetAward.swift in Sources */,
 				8D8E5E1D1C52F13500998E68 /* SetImage.swift in Sources */,
+				8D5BDE9A1C7D46600014DA9A /* HighScores.swift in Sources */,
 				8D5351C51C4F2560009AFBC6 /* QuizViewController.swift in Sources */,
 				8D8E5E2B1C532D2700998E68 /* AwardViewController.swift in Sources */,
+				8D5BDE9F1C7D506F0014DA9A /* HighScoreVC.swift in Sources */,
+				8D5BDEA11C7D53A60014DA9A /* HighScoreCell.swift in Sources */,
 				8D5351A11C4F191E009AFBC6 /* ViewController.swift in Sources */,
+				8D5BDE9D1C7D49550014DA9A /* DataServices.swift in Sources */,
 				8D2043FB1C5B171B004D19FE /* MySegmentedControl.swift in Sources */,
 				8D53519F1C4F191E009AFBC6 /* AppDelegate.swift in Sources */,
 			);
